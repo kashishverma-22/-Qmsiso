@@ -1,0 +1,1998 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QMSISO - ISO Certification Services</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/responsive2.css">
+</head>
+
+<body>
+    <!-- ================= TOP BAR ================= -->
+
+    <div class="top-bar">
+        <div class="container-fluid px-lg-5">
+            <div class="topbar-content">
+                <!-- Left -->
+                <div class="top-left">
+                    <span>
+                        <i class="fa-solid fa-location-dot"></i>
+                        QMSISO Certification Services, New Delhi
+                    </span>
+
+                    <span class="top-divider"></span>
+
+                    <span>
+                        <i class="fa-regular fa-clock"></i>
+                        Mon-Sat · 9 AM – 7 PM
+                    </span>
+                </div>
+
+                <!-- Right -->
+                <div class="top-right">
+                    <a href="mailto:contact@qmsiso.org"> contact@qmsiso.org </a>
+
+                    <a href="tel:+917814445008"> +91 7814445008 </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="main-navbar navbar-expand-lg">
+        <div class="container-fluid px-lg-5">
+            <div class="navbar-inner">
+                <!-- LOGO -->
+                <a href="#home" class="navbar-logo">
+                    <img src="images/logo.png" alt="QMSISO Logo" />
+                </a>
+
+                <!-- MOBILE BUTTON -->
+                <button class="mobile-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse" id="mainMenu">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#home"> Home </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about"> About Us </a>
+                        </li>
+
+                        <!-- SERVICES -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#services" role="button"
+                                data-bs-toggle="dropdown">
+                                Services
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a class="dropdown-item" href="#services">
+                                        ISO 9001 Certification
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#services">
+                                        ISO 14001 Certification
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#services">
+                                        ISO 45001 Certification
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#services">
+                                        ISO 27001 Certification
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact"> Contact Us </a>
+                        </li>
+                    </ul>
+
+                    <!-- QUOTE BUTTON -->
+                    <button type="button" class="quote-btn" id="openQuote">
+                        Get a Free Quote
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ================= QUOTE POPUP ================= -->
+    <div class="quote-overlay" id="quoteModal">
+        <div class="quote-popup">
+            <!-- CLOSE -->
+            <button type="button" class="popup-close" id="closeQuote">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <!-- HEADING -->
+            <div class="popup-heading">
+                <h3>Get a Free Quote</h3>
+                <p>We'll help you choose the right ISO certification.</p>
+            </div>
+
+            <!-- FORM -->
+            <form id="quoteForm">
+                <!-- Name -->
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Full Name *" required />
+                </div>
+
+                <!-- Business -->
+                <div class="form-group">
+                    <input type="text" name="business" placeholder="Business Name *" required />
+                </div>
+
+                <!-- Mobile -->
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Mobile Number *" required />
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Email Address *" required />
+                </div>
+
+                <!-- Certificate -->
+                <div class="form-group">
+                    <select name="certificate" required>
+                        <option value="">Required ISO Certificate *</option>
+
+                        <option value="ISO 9001">ISO 9001</option>
+
+                        <option value="ISO 14001">ISO 14001</option>
+
+                        <option value="ISO 45001">ISO 45001</option>
+
+                        <option value="ISO 27001">ISO 27001</option>
+
+                        <option value="ISO 22000">ISO 22000</option>
+
+                        <option value="ISO 13485">ISO 13485</option>
+
+                        <option value="Other">Other ISO Certification</option>
+                    </select>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="submit-btn">
+                    Submit Inquiry
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- home page -->
+    <section class="qmsiso-hero" id="home">
+        <div class="container-fluid px-lg-5">
+            <div class="row align-items-center g-4">
+                <!-- ================= LEFT CONTENT ================= -->
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <!-- Badge -->
+                        <div class="hero-badge">
+                            <span>●</span>
+                            YOUR TRUSTED ISO CERTIFICATION & COMPLIANCE PARTNER
+                        </div>
+
+                        <!-- Heading -->
+                        <h1 class="hero-title">
+                            BUILD TRUST WITH
+                            <span>ISO CERTIFICATION</span>
+                        </h1>
+
+                        <!-- Price Box -->
+                        <div class="hero-price">
+                            <strong>ISO 9001</strong>
+                            <span>
+                                Quality Management System · Expert Documentation Support
+                            </span>
+                        </div>
+
+                        <!-- Features -->
+                        <ul class="hero-features">
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Professional ISO Certification Guidance
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Complete Documentation & Implementation Support
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                ISO Solutions for Businesses of All Sizes
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Transparent & Hassle-Free Certification Process
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Dedicated Phone, WhatsApp & Email Support
+                            </li>
+                        </ul>
+
+                        <!-- Buttons -->
+                        <div class="hero-buttons">
+                            <button type="button" class="hero-main-btn" id="heroQuoteBtn">
+                                Get a Free Consultation
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <a href="#services" class="hero-outline-btn">
+                                Explore ISO Standards
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= RIGHT FORM ================= -->
+                <div class="col-lg-6">
+                    <div class="hero-form-box">
+                        <div class="form-heading">
+                            <h3>Get Your Free Consultation</h3>
+                            <p>
+                                Share your requirements and our ISO expert will contact you
+                                shortly.
+                            </p>
+                        </div>
+
+                        <!-- FORM -->
+                        <form id="heroQuoteForm" novalidate>
+                            <!-- FULL NAME -->
+                            <div class="form-field">
+                                <input type="text" id="fullName" name="fullName" placeholder="Full Name *" />
+                                <small class="form-error" id="fullNameError"> </small>
+                            </div>
+
+                            <!-- BUSINESS NAME -->
+
+                            <div class="form-field">
+                                <input type="text" id="businessName" name="businessName"
+                                    placeholder="Business / Company Name *" />
+
+                                <small class="form-error" id="businessNameError"> </small>
+                            </div>
+
+                            <!-- MOBILE -->
+
+                            <div class="form-field">
+                                <input type="tel" id="mobileNumber" name="mobileNumber" maxlength="10"
+                                    inputmode="numeric" placeholder="Mobile Number *" />
+
+                                <small class="form-error" id="mobileNumberError"> </small>
+                            </div>
+
+                            <!-- CERTIFICATE -->
+                            <div class="form-field">
+                                <select id="certificate" name="certificate">
+                                    <option value="">Select ISO Standard *</option>
+
+                                    <option value="ISO 9001">
+                                        ISO 9001 – Quality Management
+                                    </option>
+
+                                    <option value="ISO 14001">
+                                        ISO 14001 – Environmental Management
+                                    </option>
+
+                                    <option value="ISO 45001">
+                                        ISO 45001 – Occupational Health & Safety
+                                    </option>
+
+                                    <option value="ISO 27001">
+                                        ISO 27001 – Information Security
+                                    </option>
+
+                                    <option value="ISO 22000">
+                                        ISO 22000 – Food Safety Management
+                                    </option>
+
+                                    <option value="ISO 13485">
+                                        ISO 13485 – Medical Devices
+                                    </option>
+
+                                    <option value="ISO 50001">
+                                        ISO 50001 – Energy Management
+                                    </option>
+
+                                    <option value="Other">Other ISO Standard</option>
+                                </select>
+
+                                <small class="form-error" id="certificateError"> </small>
+                            </div>
+
+                            <!-- SUBMIT -->
+                            <button type="submit" class="form-submit-btn">
+                                Request Consultation
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= BOTTOM STATS ================= -->
+
+        <div class="hero-stats">
+            <div class="container-fluid px-lg-5">
+                <div class="row g-0">
+                    <!-- STAT 1 -->
+
+                    <div class="col-6 col-lg">
+                        <div class="stat-item">
+                            <h3>500+</h3>
+                            <p>BUSINESSES ASSISTED</p>
+                        </div>
+                    </div>
+
+                    <!-- STAT 2 -->
+
+                    <div class="col-6 col-lg">
+                        <div class="stat-item">
+                            <h3>10+</h3>
+                            <p>ISO STANDARDS</p>
+                        </div>
+                    </div>
+
+                    <!-- STAT 3 -->
+
+                    <div class="col-6 col-lg">
+                        <div class="stat-item">
+                            <h3>Expert</h3>
+                            <p>CERTIFICATION GUIDANCE</p>
+                        </div>
+                    </div>
+
+                    <!-- STAT 4 -->
+                    <div class="col-6 col-lg">
+                        <div class="stat-item">
+                            <h3>Pan-India</h3>
+                            <p>SERVICE SUPPORT</p>
+                        </div>
+                    </div>
+
+                    <!-- STAT 5 -->
+
+                    <div class="col-6 col-lg">
+                        <div class="stat-item">
+                            <h3>100%</h3>
+                            <p>DOCUMENTATION SUPPORT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-services" id="services">
+        <div class="container">
+            <!-- SECTION HEADING -->
+            <div class="services-heading text-center">
+                <span class="services-subtitle"> WHAT WE OFFER </span>
+                <h2>Our Core <span>ISO Services</span></h2>
+                <p>
+                    Professional ISO certification and compliance solutions designed to
+                    help businesses build trust, improve processes and meet industry
+                    requirements.
+                </p>
+            </div>
+
+            <!-- SERVICES GRID -->
+            <div class="row g-4">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-9001.png" alt="ISO 9001 Certification" />
+                        </div>
+
+                        <h3>ISO 9001 Certification</h3>
+
+                        <p>
+                            Establish an effective Quality Management System and improve
+                            your business processes with ISO 9001 certification support.
+                        </p>
+
+                        <div class="service-tags">
+                            <span>Quality Management</span>
+                            <span>ISO 9001</span>
+                            <span>QMS</span>
+                        </div>
+
+                        <button type="button" class="service-quote-btn">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-14001.png" alt="ISO 14001 Certification" />
+                        </div>
+
+                        <h3>ISO 14001 Certification</h3>
+                        <p>
+                            Improve environmental performance and build an effective
+                            Environmental Management System with ISO 14001 certification.
+                        </p>
+
+                        <div class="service-tags">
+                            <span>Environment</span>
+                            <span>EMS</span>
+                            <span>ISO 14001</span>
+                        </div>
+
+                        <button type="button" class="service-quote-btn">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-45001.png" alt="ISO 45001 Certification" />
+                        </div>
+
+                        <h3>ISO 45001 Certification</h3>
+                        <p>
+                            Create a safer workplace with an Occupational Health & Safety
+                            Management System based on ISO 45001 requirements.
+                        </p>
+
+                        <div class="service-tags">
+                            <span>Safety</span>
+                            <span>OH&S</span>
+                            <span>ISO 45001</span>
+                        </div>
+
+                        <button type="button" class="service-quote-btn">Get Quote</button>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-27001.png" alt="ISO 27001 Certification" />
+                        </div>
+                        <h3>ISO 27001 Certification</h3>
+
+                        <p>
+                            Protect valuable business information with a structured
+                            Information Security Management System and ISO 27001
+                            certification.
+                        </p>
+
+                        <div class="service-tags">
+                            <span>Information Security</span>
+                            <span>ISMS</span>
+                            <span>ISO 27001</span>
+                        </div>
+
+                        <button type="button" class="service-quote-btn">Get Quote</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-industries" id="industries">
+        <div class="container">
+            <!-- SECTION HEADING -->
+            <div class="industries-heading text-center">
+                <span class="industries-subtitle"> WHO WE SERVE </span>
+                <h2>
+                    ISO Solutions For Every
+                    <span>Industry</span>
+                </h2>
+                <p>
+                    From manufacturing and healthcare to IT and professional services,
+                    QMSISO provides certification and compliance support tailored to
+                    your industry.
+                </p>
+            </div>
+
+            <!-- INDUSTRIES GRID -->
+            <div class="row g-3">
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-industry"></i>
+                        </div>
+                        <h3>Manufacturing</h3>
+                        <p>ISO 9001 · ISO 14001 · ISO 45001</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3>Food & Food Processing</h3>
+                        <p>ISO 22000 · HACCP · Food Safety</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3>IT & Software</h3>
+                        <p>ISO 27001 · ISO 9001 · ISO 20000</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-hospital"></i>
+                        </div>
+                        <h3>Healthcare</h3>
+                        <p>ISO 9001 · ISO 13485 · ISO 15189</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-helmet-safety"></i>
+                        </div>
+                        <h3>Construction & Engineering</h3>
+                        <p>ISO 9001 · ISO 45001 · ISO 14001</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3>Education & Training</h3>
+                        <p>ISO 9001 · ISO 21001 · ISO 29990</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <h3>Logistics & Supply Chain</h3>
+                        <p>ISO 9001 · ISO 28000 · ISO 45001</p>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="industry-card">
+                        <div class="industry-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3>Professional Services</h3>
+                        <p>ISO 9001 · ISO 27001 · ISO 45001</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-trust" id="why-qmsiso">
+        <div class="container">
+            <!-- SECTION HEADING -->
+
+            <div class="trust-heading text-center">
+                <span class="trust-subtitle"> WHY QMSISO </span>
+                <h2>Why businesses <span>choose QMSISO</span></h2>
+            </div>
+
+            <!-- TRUST CARDS -->
+
+            <div class="row g-4">
+                <!-- ================= CARD 1 ================= -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="trust-card">
+                        <h3>Expert</h3>
+                        <h4>ISO Guidance</h4>
+                        <p>
+                            Get professional guidance throughout your ISO certification
+                            journey, from selecting the right standard to completing the
+                            required process.
+                        </p>
+                    </div>
+                </div>
+                <!-- ================= CARD 2 ================ -->
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="trust-card">
+                        <h3>Complete</h3>
+                        <h4>Documentation Support</h4>
+                        <p>
+                            Our team helps you prepare and organize the necessary documents,
+                            procedures and records required for your certification.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- ================= CARD 3 ================= -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="trust-card">
+                        <h3>Pan-India</h3>
+                        <h4>Business Support</h4>
+                        <p>
+                            QMSISO supports businesses across India with convenient
+                            consultation, documentation and certification assistance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-process" id="process">
+        <div class="container">
+            <!-- SECTION HEADING -->
+            <div class="process-heading text-center">
+                <span class="process-subtitle"> HOW IT WORKS </span>
+                <h2>
+                    Get ISO Certified in
+                    <span>5 Simple Steps</span>
+                </h2>
+                <p>
+                    Our simple and guided certification process helps businesses
+                    complete their ISO journey with minimum hassle and professional
+                    support.
+                </p>
+            </div>
+
+            <!-- PROCESS STEPS -->
+            <div class="process-wrapper">
+                <!-- ================= STEP 1 ================= -->
+                <div class="process-step">
+                    <div class="process-image">
+                        <img src="images/iso/iso-consultation.jpeg" alt="ISO Consultation" />
+                    </div>
+                    <div class="process-number">01</div>
+                    <h3>Choose Your ISO Standard</h3>
+                    <p>
+                        Tell us about your business and the ISO standard you need. Our
+                        experts will help you select the right certification.
+                    </p>
+                </div>
+
+                <!-- ================= STEP 2 ================= -->
+                <div class="process-step">
+                    <div class="process-image">
+                        <img src="images/iso/iso-requirements.jpeg" alt="ISO Requirements" />
+                    </div>
+                    <div class="process-number">02</div>
+                    <h3>Share Your Details</h3>
+                    <p>
+                        Provide your basic business information and existing documents so
+                        our team can understand your certification requirements.
+                    </p>
+                </div>
+
+                <!-- ================= STEP 3 ================= -->
+                <div class="process-step">
+                    <div class="process-image">
+                        <img src="images/iso/iso-documentation.jpeg" alt="ISO Documentation" />
+                    </div>
+                    <div class="process-number">03</div>
+                    <h3>Documentation & Preparation</h3>
+                    <p>
+                        Our experts assist with required documentation, procedures,
+                        manuals and implementation guidance according to your selected ISO
+                        standard.
+                    </p>
+                </div>
+
+                <!-- ================= STEP 4 ================= -->
+                <div class="process-step">
+                    <div class="process-image">
+                        <img src="images/iso/iso-review.jpeg" alt="ISO Review" />
+                    </div>
+                    <div class="process-number">04</div>
+                    <h3>Review & Certification</h3>
+                    <p>
+                        The required documents and information are reviewed and the
+                        certification process is coordinated with the appropriate
+                        certification body.
+                    </p>
+                </div>
+
+                <!-- ================= STEP 5 ================= -->
+                <div class="process-step">
+                    <div class="process-image">
+                        <img src="images/iso/iso-certificate.jpeg" alt="ISO Certificate" />
+                    </div>
+                    <div class="process-number">05</div>
+                    <h3>Receive Your Certificate</h3>
+                    <p>
+                        Once the certification process is completed, you receive your ISO
+                        certificate and can use it for your business and compliance
+                        requirements.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-enquiry" id="quick-enquiry">
+        <div class="container">
+            <div class="enquiry-heading text-center">
+                <span class="enquiry-subtitle"> QUICK ENQUIRY </span>
+                <h2>Get Your <span>ISO Certification</span> Started Today</h2>
+                <p>
+                    Share your business details and our ISO experts will help you choose
+                    the right certification for your business.
+                </p>
+            </div>
+
+            <!-- ================= FORM BOX ================= -->
+            <div class="enquiry-form-box">
+                <form id="quickEnquiryForm" novalidate>
+                    <div class="row g-2">
+                        <div class="col-md-6">
+                            <div class="enquiry-field">
+                                <input type="text" id="quickFullName" name="quickFullName" placeholder="Full Name *" />
+                                <small class="form-error" id="quickFullNameError"> </small>
+                            </div>
+                        </div>
+
+                        <!-- BUSINESS NAME -->
+                        <div class="col-md-6">
+                            <div class="enquiry-field">
+                                <input type="text" id="quickBusinessName" name="quickBusinessName"
+                                    placeholder="Business Name *" />
+                                <small class="form-error" id="quickBusinessNameError">
+                                </small>
+                            </div>
+                        </div>
+
+                        <!-- MOBILE -->
+                        <div class="col-12">
+                            <div class="enquiry-field">
+                                <input type="tel" id="quickMobileNumber" name="quickMobileNumber" maxlength="10"
+                                    inputmode="numeric" placeholder="Mobile Number *" />
+                                <small class="form-error" id="quickMobileNumberError">
+                                </small>
+                            </div>
+                        </div>
+
+                        <!-- CERTIFICATE -->
+                        <div class="col-12">
+                            <div class="enquiry-field">
+                                <select id="quickCertificate" name="quickCertificate">
+                                    <option value="">Required ISO Certification *</option>
+                                    <option value="ISO 9001">
+                                        ISO 9001 - Quality Management
+                                    </option>
+
+                                    <option value="ISO 14001">
+                                        ISO 14001 - Environmental Management
+                                    </option>
+
+                                    <option value="ISO 45001">
+                                        ISO 45001 - Occupational Health & Safety
+                                    </option>
+
+                                    <option value="ISO 27001">
+                                        ISO 27001 - Information Security
+                                    </option>
+
+                                    <option value="ISO 22000">ISO 22000 - Food Safety</option>
+
+                                    <option value="ISO 13485">
+                                        ISO 13485 - Medical Devices
+                                    </option>
+
+                                    <option value="ISO 50001">
+                                        ISO 50001 - Energy Management
+                                    </option>
+
+                                    <option value="Other">Other ISO Certification</option>
+                                </select>
+
+                                <small class="form-error" id="quickCertificateError"> </small>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT -->
+                        <div class="col-12">
+                            <button type="submit" class="enquiry-submit-btn">
+                                Submit Enquiry
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- NOTE -->
+                    <p class="enquiry-note">
+                        QMSISO provides professional ISO certification consultation,
+                        documentation and implementation support for businesses across
+                        India.
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-final-cta" id="final-cta">
+        <div class="container">
+            <div class="final-cta-content">
+                <h2>
+                    <span>Build Trust.</span>
+                    Grow Your Business with
+                    <br class="desktop-break" />
+                    ISO Certification
+                </h2>
+                <p>
+                    Strengthen your business credibility, meet industry requirements and
+                    move forward with professional ISO certification support from
+                    QMSISO.
+                </p>
+
+                <div class="final-cta-buttons">
+                    <!-- GET QUOTE -->
+
+                    <button type="button" class="final-quote-btn" id="heroQuoteBtn">
+                        Get a Free Quote
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+
+                    <!-- WHATSAPP -->
+                    <a href="https://wa.me/917814445008" class="final-whatsapp-btn" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about page -->
+    <section class="qmsiso-about-intro" id="about">
+        <div class="container">
+            <div class="about-intro-content text-center">
+                <span class="about-intro-subtitle"> ABOUT QMSISO </span>
+                <h2>
+                    Your Trusted
+                    <span>ISO Certification Partner</span>
+                    for Growing Businesses
+                </h2>
+                <p>
+                    QMSISO helps businesses across India achieve ISO certification with
+                    expert consultation, professional documentation support, and a
+                    simple, transparent certification process.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-features" id="why-qmsiso">
+        <div class="container">
+            <div class="qmsiso-features-grid">
+                <!-- CARD 1 -->
+                <div class="qmsiso-feature-card">
+                    <h3>
+                        <i class="fa-solid fa-certificate"></i>
+                        Trusted ISO Certification Support
+                    </h3>
+                    <p>
+                        QMSISO helps startups, MSMEs and established businesses understand
+                        ISO requirements and complete the certification process with
+                        professional guidance.
+                    </p>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="qmsiso-feature-card">
+                    <h3>
+                        <i class="fa-solid fa-file-lines"></i>
+                        Complete Documentation Support
+                    </h3>
+                    <p>
+                        Our experts assist with quality manuals, policies, SOPs,
+                        procedures and other required documentation so you can complete
+                        your certification process with less hassle.
+                    </p>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="qmsiso-feature-card">
+                    <h3>
+                        <i class="fa-solid fa-bolt"></i>
+                        Simple & Efficient Process
+                    </h3>
+                    <p>
+                        From consultation to certification, we keep the process
+                        straightforward and organized with clear communication and
+                        dedicated support at every stage.
+                    </p>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="qmsiso-feature-card">
+                    <h3>
+                        <i class="fa-solid fa-user-tie"></i>
+                        Professional Expert Guidance
+                    </h3>
+                    <p>
+                        Not sure which ISO standard is right for your business? Our team
+                        helps you identify the appropriate certification based on your
+                        industry and business requirements.
+                    </p>
+                </div>
+
+                <!-- CARD 5 -->
+                <div class="qmsiso-feature-card">
+                    <h3>
+                        <i class="fa-solid fa-shield-halved"></i>
+                        Reliable Certification Assistance
+                    </h3>
+                    <p>
+                        We focus on accurate documentation, proper process coordination
+                        and transparent communication to make your ISO certification
+                        journey smooth and reliable.
+                    </p>
+                </div>
+
+                <!-- CARD 6 -->
+                <div class="qmsiso-feature-card">
+                    <h3>
+                        <i class="fa-solid fa-globe"></i>
+                        Pan-India Service
+                    </h3>
+                    <p>
+                        QMSISO provides remote certification consultation and
+                        documentation support to businesses across India, regardless of
+                        location or industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--QMSISO CTA BANNER -->
+
+    <section class="qmsiso-cert-cta">
+        <div class="container">
+            <div class="qmsiso-cert-cta-content">
+                <h2>
+                    Ready to Get
+                    <span>ISO Certified?</span>
+                </h2>
+                <button type="button" class="qmsiso-cert-cta-btn" id="finalQuoteBtn">
+                    Talk to Our ISO Experts
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ISO CERTIFICATION INTRO-->
+
+    <section class="qmsiso-cert-intro" id="certifications">
+        <div class="container">
+            <div class="qmsiso-cert-intro-content text-center">
+                <span class="qmsiso-cert-subtitle"> ISO CERTIFICATIONS </span>
+                <h2>
+                    Professional ISO
+                    <span>Certification Services</span>
+                </h2>
+                <p>
+                    Choose the right ISO standard for your industry, business
+                    requirements, tenders, compliance needs and long-term business
+                    growth. QMSISO provides complete consultation and documentation
+                    support.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!--QMSISO CERTIFICATION TYPES -->
+
+    <section class="qmsiso-cert-types" id="certification-types">
+        <div class="container">
+            <div class="row g-4">
+                <!-- ================= IAF CARD ================= -->
+                <div class="col-lg-6">
+                    <div class="cert-type-card iaf-card">
+                        <h3>
+                            <i class="fa-solid fa-circle-check"></i>
+                            IAF Accredited Certification
+                        </h3>
+
+                        <p>
+                            Certification issued through an accredited certification body
+                            and suitable for businesses requiring internationally recognized
+                            conformity and formal tender requirements.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Suitable for government & PSU requirements
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Internationally recognized accreditation
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Structured audit-based certification process
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ================= NON IAF CARD ================= -->
+
+                <div class="col-lg-6">
+                    <div class="cert-type-card non-iaf-card">
+                        <h3>
+                            <i class="fa-solid fa-file-lines"></i>
+                            Non-IAF Certification
+                        </h3>
+
+                        <p>
+                            A practical certification option for businesses seeking
+                            professional compliance documentation, vendor requirements,
+                            private tenders and business credibility.
+                        </p>
+
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Faster certification support
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Cost-effective certification option
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Suitable for private & corporate requirements
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ISO STANDARDS ================= -->
+    <section class="qmsiso-services" id="certifications">
+        <div class="container">
+            <!-- SECTION HEADING -->
+            <div class="services-heading text-center">
+                <span class="services-subtitle">
+                    ISO CERTIFICATION SERVICES
+                </span>
+                <h2>
+                    ISO Standards We <span>Certify</span>
+                </h2>
+                <p>
+                    Get professional ISO certification support with documentation,
+                    expert guidance, and end-to-end assistance for your business.
+                </p>
+            </div>
+
+            <!-- ================= ISO CARDS ================= -->
+            <div class="row g-4">
+
+                <!-- ================= ISO 9001 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-9001-2015.png"
+                                alt="ISO 9001:2015 Quality Management Certification">
+                        </div>
+
+                        <h3>ISO 9001:2015</h3>
+
+                        <span class="iso-card-type">
+                            QUALITY MANAGEMENT SYSTEM
+                        </span>
+                        <p>
+                            Build a strong quality management system and improve
+                            customer satisfaction, operational efficiency, and
+                            business credibility across industries.
+                        </p>
+                        <div class="iso-card-bottom">
+                            <div class="iso-price">
+                                ₹1,499
+                                <small>onwards · 24 hrs</small>
+                            </div>
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 9001:2015">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISO 14001 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+
+                        <div class="service-image">
+                            <img src="images/iso/iso-14001-2015.png"
+                                alt="ISO 14001:2015 Environmental Management Certification">
+                        </div>
+
+                        <h3>ISO 14001:2015</h3>
+
+                        <span class="iso-card-type">
+                            ENVIRONMENTAL MANAGEMENT SYSTEM
+                        </span>
+
+                        <p>
+                            Improve environmental performance with a structured
+                            management system designed to reduce environmental
+                            impact and support sustainable business practices.
+                        </p>
+                        <div class="iso-card-bottom">
+                            <div class="iso-price">
+                                ₹2,999
+                                <small>onwards · 24 hrs</small>
+                            </div>
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 14001:2015">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISO 45001 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-45001-2018.png"
+                                alt="ISO 45001:2018 Occupational Health and Safety Certification">
+                        </div>
+
+                        <h3>ISO 45001:2018</h3>
+
+                        <span class="iso-card-type">
+                            OCCUPATIONAL HEALTH &amp; SAFETY
+                        </span>
+
+                        <p>
+                            Create a safer workplace with an occupational health
+                            and safety management system that helps reduce risks,
+                            improve compliance, and protect employees.
+                        </p>
+                        <div class="iso-card-bottom">
+
+                            <div class="iso-price">
+                                ₹3,999
+                                <small>onwards · 24 hrs</small>
+                            </div>
+
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 45001:2018">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISO 27001 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-27001-2022.png"
+                                alt="ISO 27001:2022 Information Security Certification">
+                        </div>
+
+                        <h3>ISO 27001:2022</h3>
+
+                        <span class="iso-card-type">
+                            INFORMATION SECURITY MANAGEMENT
+                        </span>
+
+                        <p>
+                            Protect sensitive business and customer information
+                            with a structured information security management
+                            system designed for modern digital businesses.
+                        </p>
+
+                        <div class="iso-card-bottom">
+
+                            <div class="iso-price">
+                                ₹4,999
+                                <small>onwards · 24 hrs</small>
+                            </div>
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 27001:2022">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISO 22000 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-22000-2018.png"
+                                alt="ISO 22000:2018 Food Safety Management Certification">
+                        </div>
+                        <h3>ISO 22000:2018</h3>
+                        <span class="iso-card-type">
+                            FOOD SAFETY MANAGEMENT SYSTEM
+                        </span>
+                        <p>
+                            Strengthen food safety processes with a systematic
+                            management approach for food manufacturers, restaurants,
+                            hotels, suppliers, and food-related businesses.
+                        </p>
+                        <div class="iso-card-bottom">
+                            <div class="iso-price">
+                                ₹4,999
+                                <small>onwards · 24 hrs</small>
+                            </div>
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 22000:2018">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISO 13485 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-13485-2016.png"
+                                alt="ISO 13485:2016 Medical Devices Quality Management Certification">
+                        </div>
+                        <h3>ISO 13485:2016</h3>
+                        <span class="iso-card-type">
+                            MEDICAL DEVICES QMS
+                        </span>
+                        <p>
+                            Specialized quality management certification for
+                            medical device manufacturers, suppliers, distributors,
+                            and healthcare technology organizations.
+                        </p>
+                        <div class="iso-card-bottom">
+                            <div class="iso-price">
+                                ₹5,999
+                                <small>onwards · 24 hrs</small>
+                            </div>
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 13485:2016">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISO 50001 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-50001-2018.png"
+                                alt="ISO 50001:2018 Energy Management Certification">
+                        </div>
+                        <h3>ISO 50001:2018</h3>
+                        <span class="iso-card-type">
+                            ENERGY MANAGEMENT SYSTEM
+                        </span>
+                        <p>
+                            Improve energy performance and reduce unnecessary
+                            energy consumption with a structured energy management
+                            system for organizations and industries.
+                        </p>
+                        <div class="iso-card-bottom">
+                            <div class="iso-price">
+                                ₹5,999
+                                <small>onwards · 24 hrs</small>
+                            </div>
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 50001:2018">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= ISO 20000 ================= -->
+                <div class="col-xl-3 col-lg-4 col-md-6">
+                    <div class="service-card iso-standard-card">
+                        <div class="service-image">
+                            <img src="images/iso/iso-20000-1-2018.png"
+                                alt="ISO 20000-1:2018 IT Service Management Certification">
+                        </div>
+                        <h3>ISO 20000-1:2018</h3>
+                        <span class="iso-card-type">
+                            IT SERVICE MANAGEMENT
+                        </span>
+                        <p>
+                            Improve IT service delivery, reliability, and customer
+                            satisfaction with an internationally recognized IT
+                            service management framework.
+                        </p>
+                        <div class="iso-card-bottom">
+                            <div class="iso-price">
+                                ₹5,999
+                                <small>onwards · 24 hrs</small>
+                            </div>
+                            <button type="button" class="iso-quote-btn" data-certificate="ISO 20000-1:2018">
+                                Get Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= REQUEST QUOTE ================= -->
+            <div class="text-center mt-5">
+                <button type="button" class="qmsiso-cert-cta-btn iso-request-quote" id="requestQuoteBtn">
+                    Request a Quote
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= BUSINESS COMPLIANCE SERVICES ================= -->
+    <section class="qmsiso-compliance-section">
+        <div class="container">
+            <div class="compliance-heading text-center">
+                <span class="compliance-subtitle">
+                    BUSINESS COMPLIANCE SOLUTIONS
+                </span>
+                <h2>
+                    Compliance <span>Services for Your Business</span>
+                </h2>
+                <p>
+                    Strengthen your business with reliable compliance certifications,
+                    regulatory support, and management system solutions. Our experts
+                    help you choose the right certification and manage the complete
+                    documentation process.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-compliance-services" id="compliance">
+        <div class="container">
+            <!-- ================= CARDS ================= -->
+            <div class="row g-4 compliance-grid">
+
+                <!-- ================= GMP ================= -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="compliance-card">
+                        <div class="compliance-image">
+                            <img src="images/compliance/gmp-certificate.png" alt="GMP Certification">
+                        </div>
+
+                        <div class="compliance-content">
+                            <h3>GMP Certification</h3>
+                            <p>
+                                Good Manufacturing Practices certification helps
+                                pharmaceutical, food, cosmetic, and nutraceutical
+                                businesses maintain consistent production quality,
+                                hygiene, safety, and controlled processes.
+                            </p>
+                            <div class="compliance-bottom">
+                                <div class="compliance-price">
+                                    ₹4,999
+                                    <small> onwards · 24 hrs </small>
+                                </div>
+                                <button type="button" class="compliance-quote-btn" data-certificate="GMP Certification">
+                                    Get Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= CE MARKING ================= -->
+
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="compliance-card">
+                        <div class="compliance-image">
+                            <img src="images/compliance/ce-marking.png" alt="CE Marking Certification">
+                        </div>
+                        <div class="compliance-content">
+                            <h3>CE Marking</h3>
+                            <p>
+                                CE Marking demonstrates that your products meet
+                                applicable European Union health, safety, and
+                                environmental requirements for eligible products
+                                entering the European market.
+                            </p>
+                            <div class="compliance-bottom">
+                                <div class="compliance-price">
+                                    ₹4,999
+                                    <small> onwards · 24 hrs </small>
+                                </div>
+                                <button type="button" class="compliance-quote-btn" data-certificate="CE Marking">
+                                    Get Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ================= HACCP ================= -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="compliance-card">
+                        <div class="compliance-image">
+                            <img src="images/compliance/haccp-certificate.png" alt="HACCP Certification">
+                        </div>
+                        <div class="compliance-content">
+                            <h3>HACCP Certification</h3>
+                            <p>
+                                HACCP provides a systematic approach to identifying
+                                and controlling food safety hazards throughout
+                                food production, processing, storage, and handling
+                                operations.
+                            </p>
+                            <div class="compliance-bottom">
+                                <div class="compliance-price">
+                                    ₹4,599
+                                    <small> onwards · 24 hrs </small>
+                                </div>
+                                <button type="button" class="compliance-quote-btn"
+                                    data-certificate="HACCP Certification">
+                                    Get Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= KOSHER ================= -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="compliance-card">
+                        <div class="compliance-image">
+                            <img src="images/compliance/kosher-certificate.png" alt="Kosher Certification">
+                        </div>
+                        <div class="compliance-content">
+                            <h3>Kosher Certification</h3>
+                            <p>
+                                Kosher certification helps eligible food and
+                                consumer product businesses demonstrate compliance
+                                with applicable kosher requirements and expand
+                                access to international markets.
+                            </p>
+                            <div class="compliance-bottom">
+                                <div class="compliance-price">
+                                    ₹6,999
+                                    <small> onwards · 24 hrs </small>
+                                </div>
+                                <button type="button" class="compliance-quote-btn"
+                                    data-certificate="Kosher Certification">
+                                    Get Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= RoHS ================= -->
+                <div class="col-xl-4 col-lg-4 col-md-6">
+                    <div class="compliance-card featured-compliance">
+                        <div class="compliance-image">
+                            <img src="images/compliance/rohs-compliance.png" alt="RoHS Compliance">
+                        </div>
+                        <div class="compliance-content">
+                            <h3>RoHS Compliance</h3>
+                            <p>
+                                RoHS compliance helps electrical and electronic
+                                product manufacturers and suppliers meet
+                                restrictions on specified hazardous substances
+                                for applicable products and markets.
+                            </p>
+                            <div class="compliance-bottom">
+                                <div class="compliance-price">
+                                    ₹4,999
+                                    <small> onwards · 24 hrs </small>
+                                </div>
+                                <button type="button" class="compliance-quote-btn" data-certificate="RoHS Compliance">
+                                    Get Quote
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= CTA ================= -->
+            <div class="compliance-cta text-center">
+                <button type="button" class="qmsiso-cert-cta-btn" id="complianceQuoteBtn">
+                    Get Compliance Assistance
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="qmsiso-compliance-section">
+        <div class="container">
+            <div class="compliance-heading text-center">
+                <span class="compliance-subtitle">
+                    GET IN TOUCH
+                </span>
+                <h2>
+                    Contact <span>QMSISO</span>
+                </h2>
+                <p>
+                    Have questions about ISO certification or compliance?
+                    Fill in the form below and our certification experts
+                    will get back to you within 30 minutes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section class="qmsiso-contact-page" id="contact">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <!-- ================= LEFT CONTACT INFO ================= -->
+                <div class="col-lg-6">
+                    <div class="contact-info-wrapper">
+                        <!-- OFFICE -->
+                        <div class="contact-info-card">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div class="contact-info-content">
+                                <h3>Office Address</h3>
+
+                                <p>
+                                    QMSISO Certification Services,<br>
+                                    New Delhi – 110034, India
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- PHONE -->
+                        <div class="contact-info-card">
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+
+                            <div class="contact-info-content">
+                                <h3>Phone / WhatsApp</h3>
+
+                                <a href="tel:+917814445008">
+                                    +91 7814445008
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- EMAIL -->
+                        <div class="contact-info-card">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+
+                            <div class="contact-info-content">
+                                <h3>Email</h3>
+
+                                <a href="mailto:contact@qmsiso.org">
+                                    contact@qmsiso.org
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- WORKING HOURS -->
+                        <div class="contact-info-card">
+
+                            <div class="contact-icon">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+
+                            <div class="contact-info-content">
+                                <h3>Working Hours</h3>
+
+                                <p>
+                                    Monday – Saturday<br>
+                                    9:00 AM – 7:00 PM
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================= RIGHT FORM ================= -->
+                <div class="col-lg-6">
+                    <div class="contact-form-box">
+                        <div class="contact-form-heading">
+                            <span>GET IN TOUCH</span>
+                            <h2>
+                                Submit Your <strong>Inquiry</strong>
+                            </h2>
+                            <p>
+                                Tell us about your certification requirements
+                                and our experts will get back to you shortly.
+                            </p>
+                        </div>
+
+                        <form id="contactForm" novalidate>
+                            <!-- NAME -->
+                            <div class="contact-field">
+
+                                <input type="text" id="contactName" name="contactName" placeholder="Full Name *">
+
+                                <small class="contact-error" id="contactNameError">
+                                </small>
+                            </div>
+
+                            <!-- BUSINESS -->
+                            <div class="contact-field">
+                                <input type="text" id="contactBusiness" name="contactBusiness"
+                                    placeholder="Business Name *">
+                                <small class="contact-error" id="contactBusinessError">
+                                </small>
+                            </div>
+
+                            <!-- MOBILE -->
+                            <div class="contact-field">
+                                <input type="tel" id="contactMobile" name="contactMobile" maxlength="10"
+                                    inputmode="numeric" placeholder="Mobile Number *">
+                                <small class="contact-error" id="contactMobileError">
+                                </small>
+                            </div>
+
+                            <!-- CERTIFICATE -->
+                            <div class="contact-field">
+                                <select id="contactCertificate" name="contactCertificate">
+
+                                    <option value="">
+                                        Select Required Certification *
+                                    </option>
+
+                                    <option value="ISO 9001:2015">
+                                        ISO 9001:2015
+                                    </option>
+
+                                    <option value="ISO 14001:2015">
+                                        ISO 14001:2015
+                                    </option>
+
+                                    <option value="ISO 45001:2018">
+                                        ISO 45001:2018
+                                    </option>
+
+                                    <option value="ISO 27001:2022">
+                                        ISO 27001:2022
+                                    </option>
+
+                                    <option value="ISO 22000:2018">
+                                        ISO 22000:2018
+                                    </option>
+
+                                    <option value="ISO 13485:2016">
+                                        ISO 13485:2016
+                                    </option>
+
+                                    <option value="ISO 50001:2018">
+                                        ISO 50001:2018
+                                    </option>
+
+                                    <option value="GMP Certificate">
+                                        GMP Certificate
+                                    </option>
+
+                                    <option value="CE Marking">
+                                        CE Marking
+                                    </option>
+
+                                    <option value="HACCP Certificate">
+                                        HACCP Certificate
+                                    </option>
+
+                                    <option value="Other">
+                                        Other Certification
+                                    </option>
+                                </select>
+                                <small class="contact-error" id="contactCertificateError">
+                                </small>
+                            </div>
+
+                            <!-- MESSAGE -->
+                            <div class="contact-field">
+
+                                <textarea id="contactMessage" name="contactMessage" rows="4"
+                                    placeholder="Tell us about your certification requirement"></textarea>
+                            </div>
+
+                            <!-- BUTTON -->
+                            <button type="submit" class="contact-submit-btn">
+                                Submit Inquiry
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <p class="contact-note">
+                                We provide professional ISO certification
+                                consultation, documentation and compliance support
+                                for businesses across India.
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="qmsiso-footer">
+        <div class="container-fluid px-lg-5">
+            <div class="row g-4 footer-main">
+                <!-- ================= BRAND + MAP ================= -->
+                <div class="col-lg-5 col-md-12">
+                    <div class="footer-brand">
+                        <a href="#home" class="footer-logo">
+                            <img src="images/logo.png" alt="QMSISO Certification">
+                        </a>
+                        <p>
+                            QMSISO is a professional ISO certification and
+                            compliance support partner helping businesses achieve
+                            internationally recognized standards with simple,
+                            reliable, and hassle-free documentation support.
+                        </p>
+                    </div>
+
+                    <!-- MAP -->
+                    <div class="footer-map">
+                        <iframe src="https://www.google.com/maps?q=New%20Delhi%2C%20India&output=embed" loading="lazy"
+                            allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- ================= CERTIFICATIONS ================= -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="footer-column">
+                        <h4>CERTIFICATIONS</h4>
+
+                        <ul>
+
+                            <li>
+                                <a href="#certifications">
+                                    ISO 9001:2015
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#certifications">
+                                    ISO 14001:2015
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#certifications">
+                                    ISO 45001:2018
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#certifications">
+                                    ISO 27001:2022
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#certifications">
+                                    ISO 22000:2018
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#certifications">
+                                    ISO 13485:2016
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#certifications">
+                                    ISO 50001:2018
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ================= COMPLIANCES ================= -->
+                <div class="col-lg-2 col-md-4 col-sm-6">
+                    <div class="footer-column">
+                        <h4>COMPLIANCES</h4>
+                        <ul>
+                            <li>
+                                <a href="#compliance">
+                                    GMP Certificate
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#compliance">
+                                    CE Marking
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#compliance">
+                                    HACCP Certificate
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#compliance">
+                                    Kosher Certification
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#compliance">
+                                    RoHS Compliance
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- ================= COMPANY ================= -->
+                <div class="col-lg-3 col-md-4 col-sm-6">
+
+                    <div class="footer-column">
+
+                        <h4>COMPANY</h4>
+                        <ul>
+
+                            <li>
+                                <a href="#home">
+                                    Home
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#about">
+                                    About Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#certifications">
+                                    Certifications
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#contact">
+                                    Contact Us
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Privacy Policy
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Terms & Conditions
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    Refund Policy
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- CONTACT -->
+                        <div class="footer-contact">
+
+                            <a href="tel:+917814445008">
+                                <i class="fa-solid fa-phone"></i>
+                                +91 7814445008
+                            </a>
+
+                            <a href="mailto:contact@qmsiso.org">
+                                <i class="fa-solid fa-envelope"></i>
+                                contact@qmsiso.org
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ================= FOOTER BOTTOM ================= -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>
+                        © 2026 QMSISO. All rights reserved.
+                    </p>
+                    <p class="footer-disclaimer">
+                        Disclaimer: QMSISO provides professional third-party
+                        certification consultation and documentation support.
+                        Certification is issued by recognized certification bodies
+                        according to applicable requirements.
+                    </p>
+                </div>
+
+                <div class="footer-bottom-links">
+
+                    <a href="#">
+                        Privacy Policy
+                    </a>
+
+                    <a href="#">
+                        Terms
+                    </a>
+                    <a href="#">
+                        Refund Policy
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= WHATSAPP ================= -->
+        <a href="https://wa.me/917814445008" class="footer-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <!-- ================= CHAT BUTTON ================= -->
+        <button type="button" class="footer-chat" aria-label="Open Chat">
+            <i class="fa-solid fa-comment"></i>
+
+        </button>
+
+    </footer>
+
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

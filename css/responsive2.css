@@ -1,0 +1,4286 @@
+/* =========================================================
+   QMSISO QUICK ENQUIRY
+========================================================= */
+
+@media (max-width: 1200px) {
+  .qmsiso-enquiry {
+    padding: 75px 25px 80px;
+  }
+
+  .enquiry-heading {
+    max-width: 760px;
+    margin-bottom: 32px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 36px;
+  }
+
+  .enquiry-heading p {
+    max-width: 650px;
+    font-size: 13.5px;
+  }
+
+  .enquiry-form-box {
+    max-width: 650px;
+    padding: 30px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 42px;
+    font-size: 12.5px;
+  }
+
+  .enquiry-submit-btn {
+    height: 42px;
+    font-size: 13.5px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .qmsiso-enquiry {
+    padding: 68px 20px 74px;
+  }
+
+  .enquiry-heading {
+    max-width: 700px;
+    margin-bottom: 30px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 11px;
+    letter-spacing: 1.4px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 33px;
+  }
+
+  .enquiry-heading p {
+    font-size: 12.5px;
+    line-height: 1.7;
+  }
+
+  .enquiry-form-box {
+    max-width: 620px;
+    padding: 27px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 41px;
+    padding: 0 13px;
+    font-size: 12px;
+  }
+
+  .form-error {
+    font-size: 10px;
+    min-height: 17px;
+  }
+
+  .enquiry-submit-btn {
+    height: 41px;
+    font-size: 13px;
+  }
+
+  .enquiry-note {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  .qmsiso-enquiry {
+    padding: 62px 20px 68px;
+  }
+
+  .enquiry-heading {
+    max-width: 650px;
+    margin-bottom: 27px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    margin-bottom: 7px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 30px;
+  }
+
+  .enquiry-heading p {
+    max-width: 600px;
+    margin-top: 12px;
+    font-size: 12px;
+  }
+
+  .enquiry-form-box {
+    max-width: 600px;
+    padding: 25px;
+    border-radius: 8px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 40px;
+    font-size: 11.5px;
+  }
+
+  .form-error {
+    min-height: 16px;
+    font-size: 9.5px;
+  }
+
+  .enquiry-submit-btn {
+    height: 40px;
+    font-size: 12.5px;
+  }
+
+  .enquiry-note {
+    font-size: 9.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .qmsiso-enquiry {
+    padding: 55px 15px 60px;
+  }
+
+  .enquiry-heading {
+    max-width: 580px;
+    margin-bottom: 25px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 9.5px;
+    letter-spacing: 1.2px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .enquiry-heading p {
+    max-width: 540px;
+    margin-top: 10px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .enquiry-form-box {
+    width: 100%;
+    max-width: 560px;
+    padding: 23px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 40px;
+    padding: 0 12px;
+    font-size: 11px;
+  }
+
+  .form-error {
+    min-height: 15px;
+    padding-top: 3px;
+    font-size: 9px;
+  }
+
+  .enquiry-submit-btn {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .enquiry-submit-btn i {
+    font-size: 10px;
+  }
+
+  .enquiry-note {
+    margin-top: 9px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 576px) {
+  .qmsiso-enquiry {
+    padding: 46px 12px 52px;
+  }
+
+  .enquiry-heading {
+    max-width: 100%;
+    margin-bottom: 22px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 8.5px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .enquiry-heading p {
+    max-width: 480px;
+    margin-top: 9px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .enquiry-form-box {
+    width: 100%;
+    max-width: 500px;
+    padding: 19px;
+    border-radius: 7px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 39px;
+    padding: 0 11px;
+    font-size: 10px;
+    border-radius: 4px;
+  }
+
+  .form-error {
+    min-height: 14px;
+    font-size: 8.5px;
+  }
+
+  .enquiry-submit-btn {
+    height: 39px;
+    font-size: 11px;
+  }
+
+  .enquiry-submit-btn i {
+    margin-left: 5px;
+    font-size: 9px;
+  }
+
+  .enquiry-note {
+    font-size: 8.5px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 480px) {
+  .qmsiso-enquiry {
+    padding: 40px 10px 46px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 8px;
+    letter-spacing: 0.9px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 21px;
+  }
+
+  .enquiry-heading p {
+    font-size: 9px;
+  }
+
+  .enquiry-form-box {
+    max-width: 430px;
+    padding: 17px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 37px;
+    padding: 0 10px;
+    font-size: 9.5px;
+  }
+
+  .form-error {
+    min-height: 13px;
+    font-size: 8px;
+  }
+
+  .enquiry-submit-btn {
+    height: 37px;
+    font-size: 10.5px;
+  }
+
+  .enquiry-note {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .qmsiso-enquiry {
+    padding: 34px 8px 40px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .enquiry-heading {
+    margin-bottom: 18px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 19px;
+  }
+
+  .enquiry-heading p {
+    margin-top: 8px;
+    font-size: 8px;
+    line-height: 1.55;
+  }
+
+  .enquiry-form-box {
+    max-width: 340px;
+    padding: 14px;
+    border-radius: 6px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 35px;
+    padding: 0 9px;
+    font-size: 8.5px;
+  }
+
+  .form-error {
+    min-height: 12px;
+    font-size: 7px;
+  }
+
+  .enquiry-submit-btn {
+    height: 35px;
+    font-size: 9.5px;
+  }
+
+  .enquiry-submit-btn i {
+    font-size: 8px;
+  }
+
+  .enquiry-note {
+    margin-top: 7px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 280px) {
+  .qmsiso-enquiry {
+    padding: 28px 6px 34px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 6px;
+    letter-spacing: 0.6px;
+  }
+
+  .enquiry-heading {
+    margin-bottom: 15px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 16px;
+  }
+
+  .enquiry-heading p {
+    font-size: 7px;
+  }
+
+  .enquiry-form-box {
+    max-width: 270px;
+    padding: 11px;
+    border-radius: 5px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 32px;
+    padding: 0 7px;
+    font-size: 7.5px;
+  }
+
+  .form-error {
+    min-height: 10px;
+    font-size: 6px;
+    padding-top: 2px;
+  }
+
+  .enquiry-submit-btn {
+    height: 32px;
+    font-size: 8px;
+  }
+
+  .enquiry-note {
+    font-size: 6px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 240px) {
+  .qmsiso-enquiry {
+    padding: 23px 4px 28px;
+  }
+
+  .enquiry-subtitle {
+    font-size: 5px;
+    letter-spacing: 0.4px;
+  }
+
+  .enquiry-heading h2 {
+    font-size: 13px;
+  }
+
+  .enquiry-heading p {
+    margin-top: 6px;
+    font-size: 6px;
+  }
+
+  .enquiry-form-box {
+    max-width: 232px;
+    padding: 8px;
+    border-radius: 4px;
+  }
+
+  .enquiry-field input,
+  .enquiry-field select {
+    height: 29px;
+    padding: 0 6px;
+    font-size: 6.5px;
+  }
+
+  .form-error {
+    min-height: 9px;
+    font-size: 5px;
+  }
+
+  .enquiry-submit-btn {
+    height: 29px;
+    font-size: 7px;
+  }
+
+  .enquiry-submit-btn i {
+    font-size: 6px;
+    margin-left: 3px;
+  }
+
+  .enquiry-note {
+    margin-top: 5px;
+    font-size: 5px;
+  }
+}
+
+/* =========================================================
+   QMSISO FINAL CTA
+   QMSISO ABOUT INTRO
+   QMSISO FEATURES
+========================================================= */
+
+@media (max-width: 1200px) {
+  /* ================= FINAL CTA ================= */
+
+  .qmsiso-final-cta {
+    padding: 90px 25px 95px;
+  }
+
+  .final-cta-content {
+    max-width: 850px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 40px;
+  }
+
+  .final-cta-content p {
+    max-width: 680px;
+    font-size: 14px;
+  }
+
+  .final-cta-buttons {
+    margin-top: 32px;
+  }
+
+  /* ================= ABOUT INTRO ================= */
+
+  .qmsiso-about-intro {
+    padding: 70px 25px 65px;
+  }
+
+  .about-intro-content {
+    max-width: 1050px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 37px;
+  }
+
+  .about-intro-content p {
+    max-width: 680px;
+    font-size: 12.5px;
+  }
+
+  /* ================= FEATURES ================= */
+
+  .qmsiso-features {
+    padding: 65px 25px;
+  }
+
+  .qmsiso-features-grid {
+    gap: 25px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 25px 22px;
+  }
+
+  .qmsiso-feature-card h3 {
+    font-size: 15px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* FINAL CTA */
+
+  .qmsiso-final-cta {
+    padding: 82px 20px 88px;
+  }
+
+  .final-cta-content {
+    max-width: 800px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 36px;
+  }
+
+  .final-cta-content p {
+    max-width: 620px;
+    margin-top: 17px;
+    font-size: 13px;
+  }
+
+  .final-cta-buttons {
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    height: 45px;
+    font-size: 13px;
+  }
+
+  .final-quote-btn {
+    padding: 0 25px;
+  }
+
+  .final-whatsapp-btn {
+    padding: 0 22px;
+  }
+
+  /* ABOUT */
+
+  .qmsiso-about-intro {
+    padding: 65px 20px 60px;
+  }
+
+  .about-intro-content {
+    max-width: 950px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 11px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 34px;
+  }
+
+  .about-intro-content p {
+    max-width: 640px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* FEATURES */
+
+  .qmsiso-features {
+    padding: 60px 20px;
+  }
+
+  .qmsiso-features-grid {
+    gap: 22px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 23px 20px;
+  }
+
+  .qmsiso-feature-card h3 {
+    font-size: 14px;
+  }
+
+  .qmsiso-feature-card h3 i {
+    font-size: 16px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* ================= FINAL CTA ================= */
+
+  .qmsiso-final-cta {
+    padding: 72px 20px 78px;
+  }
+
+  .final-cta-content {
+    max-width: 700px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+
+  .final-cta-content p {
+    max-width: 570px;
+    margin-top: 15px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .final-cta-buttons {
+    margin-top: 27px;
+    gap: 10px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    height: 43px;
+    font-size: 12px;
+  }
+
+  .final-quote-btn {
+    padding: 0 22px;
+  }
+
+  .final-whatsapp-btn {
+    padding: 0 20px;
+  }
+
+  .final-whatsapp-btn i {
+    font-size: 16px;
+  }
+
+  /* ================= ABOUT INTRO ================= */
+
+  .qmsiso-about-intro {
+    padding: 58px 20px 55px;
+  }
+
+  .about-intro-content {
+    max-width: 850px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 31px;
+  }
+
+  .about-intro-content p {
+    max-width: 580px;
+    margin-top: 13px;
+    font-size: 11.5px;
+  }
+
+  /* ================= FEATURES ================= */
+
+  .qmsiso-features {
+    padding: 55px 20px;
+  }
+
+  .qmsiso-features-grid {
+    gap: 18px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 21px 18px 20px;
+    border-left-width: 3px;
+  }
+
+  .qmsiso-feature-card h3 {
+    gap: 7px;
+    font-size: 13px;
+  }
+
+  .qmsiso-feature-card h3 i {
+    width: 20px;
+    font-size: 15px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 11px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ================= FINAL CTA ================= */
+
+  .qmsiso-final-cta {
+    padding: 60px 15px 65px;
+  }
+
+  .final-cta-content {
+    max-width: 600px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .final-cta-content p {
+    max-width: 520px;
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .final-cta-buttons {
+    margin-top: 24px;
+    gap: 9px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    height: 41px;
+    font-size: 11px;
+  }
+
+  .final-quote-btn {
+    padding: 0 19px;
+  }
+
+  .final-whatsapp-btn {
+    padding: 0 17px;
+    gap: 6px;
+  }
+
+  .final-whatsapp-btn i {
+    font-size: 15px;
+  }
+
+  /* ================= ABOUT ================= */
+
+  .qmsiso-about-intro {
+    padding: 50px 15px 48px;
+  }
+
+  .about-intro-content {
+    max-width: 650px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 9px;
+    letter-spacing: 1.1px;
+    margin-bottom: 7px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .about-intro-content p {
+    max-width: 540px;
+    margin-top: 11px;
+    font-size: 10.5px;
+    line-height: 1.65;
+  }
+
+  /* ================= FEATURES ================= */
+
+  .qmsiso-features {
+    padding: 50px 15px;
+  }
+
+  .qmsiso-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 19px 16px;
+  }
+
+  .qmsiso-feature-card h3 {
+    font-size: 12px;
+    line-height: 1.35;
+  }
+
+  .qmsiso-feature-card h3 i {
+    width: 18px;
+    font-size: 14px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 576px) {
+  /* ================= FINAL CTA ================= */
+
+  .qmsiso-final-cta {
+    padding: 48px 12px 53px;
+  }
+
+  .final-cta-content {
+    max-width: 100%;
+  }
+
+  .final-cta-content h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .final-cta-content p {
+    max-width: 460px;
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .final-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 9px;
+    margin-top: 21px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    width: 100%;
+    max-width: 300px;
+    height: 40px;
+    font-size: 10.5px;
+  }
+
+  .final-quote-btn {
+    padding: 0 15px;
+  }
+
+  .final-whatsapp-btn {
+    padding: 0 15px;
+  }
+
+  /* ================= ABOUT ================= */
+
+  .qmsiso-about-intro {
+    padding: 43px 12px 42px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 8px;
+    letter-spacing: 0.9px;
+    margin-bottom: 6px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 24px;
+    line-height: 1.2;
+  }
+
+  .about-intro-content p {
+    max-width: 450px;
+    margin-top: 9px;
+    font-size: 9.5px;
+    line-height: 1.6;
+  }
+
+  /* ================= FEATURES ================= */
+
+  .qmsiso-features {
+    padding: 43px 12px;
+  }
+
+  .qmsiso-features-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 18px 15px;
+    border-left-width: 3px;
+  }
+
+  .qmsiso-feature-card h3 {
+    font-size: 11px;
+    margin-bottom: 7px;
+  }
+
+  .qmsiso-feature-card h3 i {
+    font-size: 13px;
+    width: 18px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  /* FINAL CTA */
+
+  .qmsiso-final-cta {
+    padding: 40px 10px 45px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 21px;
+  }
+
+  .final-cta-content p {
+    font-size: 9px;
+  }
+
+  .final-cta-buttons {
+    margin-top: 18px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    max-width: 280px;
+    height: 38px;
+    font-size: 10px;
+  }
+
+  /* ABOUT */
+
+  .qmsiso-about-intro {
+    padding: 38px 10px 37px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 7.5px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 21px;
+  }
+
+  .about-intro-content p {
+    font-size: 8.5px;
+  }
+
+  /* FEATURES */
+
+  .qmsiso-features {
+    padding: 38px 10px;
+  }
+
+  .qmsiso-features-grid {
+    gap: 11px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 16px 13px;
+  }
+
+  .qmsiso-feature-card h3 {
+    font-size: 10px;
+  }
+
+  .qmsiso-feature-card h3 i {
+    font-size: 12px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 8px;
+  }
+}
+
+
+@media (max-width: 360px) {
+  /* FINAL CTA */
+
+  .qmsiso-final-cta {
+    padding: 34px 8px 39px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 19px;
+  }
+
+  .final-cta-content p {
+    margin-top: 8px;
+    font-size: 8px;
+  }
+
+  .final-cta-buttons {
+    gap: 7px;
+    margin-top: 15px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    max-width: 250px;
+    height: 35px;
+    font-size: 9px;
+  }
+
+  .final-whatsapp-btn i {
+    font-size: 13px;
+  }
+
+  /* ABOUT */
+
+  .qmsiso-about-intro {
+    padding: 33px 8px 32px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 6.5px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 18px;
+  }
+
+  .about-intro-content p {
+    margin-top: 7px;
+    font-size: 7.5px;
+    line-height: 1.55;
+  }
+
+  /* FEATURES */
+
+  .qmsiso-features {
+    padding: 33px 8px;
+  }
+
+  .qmsiso-features-grid {
+    gap: 9px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 14px 11px;
+    border-left-width: 2px;
+  }
+
+  .qmsiso-feature-card h3 {
+    gap: 5px;
+    font-size: 9px;
+  }
+
+  .qmsiso-feature-card h3 i {
+    width: 16px;
+    font-size: 11px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 7px;
+    line-height: 1.55;
+  }
+}
+
+@media (max-width: 280px) {
+  /* FINAL CTA */
+
+  .qmsiso-final-cta {
+    padding: 28px 6px 33px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 16px;
+  }
+
+  .final-cta-content p {
+    font-size: 7px;
+  }
+
+  .final-cta-buttons {
+    margin-top: 13px;
+    gap: 6px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    max-width: 220px;
+    height: 32px;
+    font-size: 8px;
+  }
+
+  .final-whatsapp-btn i {
+    font-size: 11px;
+  }
+
+  /* ABOUT */
+
+  .qmsiso-about-intro {
+    padding: 27px 6px 28px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 5.5px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 15px;
+  }
+
+  .about-intro-content p {
+    font-size: 6.5px;
+  }
+
+  /* FEATURES */
+
+  .qmsiso-features {
+    padding: 27px 6px;
+  }
+
+  .qmsiso-features-grid {
+    gap: 7px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 12px 9px;
+  }
+
+  .qmsiso-feature-card h3 {
+    font-size: 7.5px;
+  }
+
+  .qmsiso-feature-card h3 i {
+    width: 14px;
+    font-size: 9px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 6.5px;
+    line-height: 1.5;
+  }
+}
+
+
+@media (max-width: 240px) {
+  /* FINAL CTA */
+
+  .qmsiso-final-cta {
+    padding: 23px 4px 27px;
+  }
+
+  .final-cta-content h2 {
+    font-size: 13px;
+  }
+
+  .final-cta-content p {
+    margin-top: 6px;
+    font-size: 5.5px;
+  }
+
+  .final-cta-buttons {
+    gap: 5px;
+    margin-top: 10px;
+  }
+
+  .final-quote-btn,
+  .final-whatsapp-btn {
+    max-width: 190px;
+    height: 29px;
+    font-size: 6.5px;
+    border-radius: 5px;
+  }
+
+  .final-whatsapp-btn i {
+    font-size: 9px;
+  }
+
+  /* ABOUT */
+
+  .qmsiso-about-intro {
+    padding: 22px 4px 24px;
+  }
+
+  .about-intro-subtitle {
+    font-size: 5px;
+  }
+
+  .about-intro-content h2 {
+    font-size: 12px;
+  }
+
+  .about-intro-content p {
+    margin-top: 5px;
+    font-size: 5px;
+    line-height: 1.4;
+  }
+
+  /* FEATURES */
+
+  .qmsiso-features {
+    padding: 22px 4px;
+  }
+
+  .qmsiso-features-grid {
+    gap: 5px;
+  }
+
+  .qmsiso-feature-card {
+    padding: 9px 7px;
+    border-left-width: 2px;
+    border-radius: 5px;
+  }
+
+  .qmsiso-feature-card h3 {
+    gap: 4px;
+    font-size: 6px;
+  }
+
+  .qmsiso-feature-card h3 i {
+    width: 12px;
+    font-size: 8px;
+  }
+
+  .qmsiso-feature-card p {
+    font-size: 5px;
+    line-height: 1.4;
+  }
+}
+/* =========================================================
+   QMSISO CERTIFICATION SECTIONS
+========================================================= */
+
+@media (max-width: 1200px) {
+  /* ================= CERT CTA ================= */
+
+  .qmsiso-cert-cta {
+    padding: 58px 25px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 38px;
+  }
+
+  .qmsiso-cert-cta-btn {
+    min-width: 195px;
+    height: 44px;
+    font-size: 13px;
+  }
+
+  /* ================= CERT INTRO ================= */
+
+  .qmsiso-cert-intro {
+    padding: 58px 25px 62px;
+  }
+
+  .qmsiso-cert-intro-content {
+    max-width: 740px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 35px;
+  }
+
+  .qmsiso-cert-intro-content p {
+    max-width: 650px;
+    font-size: 12.5px;
+  }
+
+  /* ================= CERT TYPES ================= */
+
+  .qmsiso-cert-types {
+    padding: 45px 20px 55px;
+  }
+
+  .cert-type-card {
+    padding: 26px 24px 23px;
+  }
+
+  .cert-type-card h3 {
+    font-size: 16px;
+  }
+
+  .cert-type-card p {
+    font-size: 13px;
+  }
+
+  .cert-type-card ul li {
+    font-size: 12px;
+  }
+}
+
+
+@media (max-width: 1100px) {
+  .qmsiso-cert-cta {
+    padding: 54px 20px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 35px;
+  }
+
+  .qmsiso-cert-cta-btn {
+    min-width: 190px;
+    height: 43px;
+    margin-top: 18px;
+    padding: 0 21px;
+    font-size: 12.5px;
+  }
+
+  /* INTRO */
+
+  .qmsiso-cert-intro {
+    padding: 53px 20px 57px;
+  }
+
+  .qmsiso-cert-intro-content {
+    max-width: 700px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 10px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 32px;
+  }
+
+  .qmsiso-cert-intro-content p {
+    max-width: 600px;
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  /* TYPES */
+
+  .qmsiso-cert-types {
+    padding: 42px 20px 50px;
+  }
+
+  .cert-type-card {
+    padding: 23px 21px 21px;
+  }
+
+  .cert-type-card h3 {
+    gap: 8px;
+    font-size: 15px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 18px;
+  }
+
+  .cert-type-card p {
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .cert-type-card ul li {
+    gap: 7px;
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+}
+
+
+@media (max-width: 991px) {
+  /* ================= CTA ================= */
+
+  .qmsiso-cert-cta {
+    padding: 50px 20px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 31px;
+    line-height: 1.2;
+  }
+
+  .qmsiso-cert-cta-btn {
+    min-width: 180px;
+    height: 42px;
+    margin-top: 17px;
+    font-size: 12px;
+  }
+
+  /* ================= INTRO ================= */
+
+  .qmsiso-cert-intro {
+    padding: 50px 20px 54px;
+  }
+
+  .qmsiso-cert-intro-content {
+    max-width: 650px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 9.5px;
+    letter-spacing: 1.4px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 29px;
+    line-height: 1.2;
+  }
+
+  .qmsiso-cert-intro-content p {
+    max-width: 570px;
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  /* ================= TYPES ================= */
+
+  .qmsiso-cert-types {
+    padding: 40px 20px 47px;
+  }
+
+  .cert-type-card {
+    padding: 21px 19px 20px;
+  }
+
+  .cert-type-card h3 {
+    gap: 7px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 17px;
+  }
+
+  .cert-type-card p {
+    margin-bottom: 10px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  .cert-type-card ul li {
+    gap: 6px;
+    margin-bottom: 6px;
+    font-size: 10px;
+    line-height: 1.45;
+  }
+
+  .cert-type-card ul li i {
+    margin-top: 2px;
+    font-size: 9px;
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* ================= CTA ================= */
+
+  .qmsiso-cert-cta {
+    padding: 45px 15px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 27px;
+  }
+
+  .qmsiso-cert-cta-btn {
+    min-width: 175px;
+    height: 40px;
+    margin-top: 15px;
+    padding: 0 18px;
+    font-size: 11px;
+  }
+
+  .qmsiso-cert-cta-btn i {
+    font-size: 10px;
+  }
+
+  /* ================= INTRO ================= */
+
+  .qmsiso-cert-intro {
+    padding: 45px 15px 48px;
+  }
+
+  .qmsiso-cert-intro-content {
+    max-width: 580px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 8.5px;
+    letter-spacing: 1.2px;
+    margin-bottom: 7px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 26px;
+  }
+
+  .qmsiso-cert-intro-content p {
+    max-width: 520px;
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  /* ================= TYPES ================= */
+
+  .qmsiso-cert-types {
+    padding: 38px 15px 44px;
+  }
+
+  .cert-type-card {
+    padding: 19px 17px 18px;
+  }
+
+  .cert-type-card h3 {
+    font-size: 13px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 16px;
+  }
+
+  .cert-type-card p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .cert-type-card ul li {
+    font-size: 9px;
+    line-height: 1.45;
+  }
+}
+
+@media (max-width: 576px) {
+  /* ================= CTA ================= */
+
+  .qmsiso-cert-cta {
+    padding: 38px 12px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .qmsiso-cert-cta-btn {
+    width: 100%;
+    max-width: 280px;
+    min-width: 0;
+    height: 39px;
+    margin-top: 14px;
+    padding: 0 15px;
+    font-size: 10.5px;
+  }
+
+  /* ================= INTRO ================= */
+
+  .qmsiso-cert-intro {
+    padding: 38px 12px 42px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 8px;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 23px;
+    line-height: 1.2;
+  }
+
+  .qmsiso-cert-intro-content p {
+    max-width: 450px;
+    margin-top: 9px;
+    font-size: 9px;
+    line-height: 1.6;
+  }
+
+  /* ================= TYPES ================= */
+
+  .qmsiso-cert-types {
+    padding: 34px 12px 40px;
+  }
+  .qmsiso-cert-types .row {
+    row-gap: 12px;
+  }
+
+  .cert-type-card {
+    padding: 17px 15px 16px;
+  }
+
+  .cert-type-card h3 {
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 14px;
+  }
+
+  .cert-type-card p {
+    margin-bottom: 9px;
+    font-size: 9px;
+    line-height: 1.55;
+  }
+
+  .cert-type-card ul li {
+    gap: 5px;
+    margin-bottom: 5px;
+    font-size: 8px;
+    line-height: 1.45;
+  }
+
+  .cert-type-card ul li i {
+    margin-top: 2px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* CTA */
+
+  .qmsiso-cert-cta {
+    padding: 34px 10px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 20px;
+  }
+
+  .qmsiso-cert-cta-btn {
+    max-width: 260px;
+    height: 37px;
+    font-size: 9.5px;
+  }
+
+  /* INTRO */
+
+  .qmsiso-cert-intro {
+    padding: 34px 10px 37px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 7px;
+    letter-spacing: 0.8px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 20px;
+  }
+
+  .qmsiso-cert-intro-content p {
+    font-size: 8px;
+    line-height: 1.55;
+  }
+
+  /* TYPES */
+
+  .qmsiso-cert-types {
+    padding: 30px 10px 35px;
+  }
+
+  .cert-type-card {
+    padding: 15px 13px;
+  }
+
+  .cert-type-card h3 {
+    font-size: 10px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 13px;
+  }
+
+  .cert-type-card p {
+    font-size: 8px;
+  }
+
+  .cert-type-card ul li {
+    font-size: 7.5px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* CTA */
+
+  .qmsiso-cert-cta {
+    padding: 30px 8px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 18px;
+  }
+
+  .qmsiso-cert-cta-btn {
+    max-width: 230px;
+    height: 34px;
+    margin-top: 11px;
+    font-size: 8.5px;
+  }
+
+  .qmsiso-cert-cta-btn i {
+    font-size: 8px;
+  }
+
+  /* INTRO */
+
+  .qmsiso-cert-intro {
+    padding: 30px 8px 33px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 6px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 17px;
+  }
+
+  .qmsiso-cert-intro-content p {
+    margin-top: 7px;
+    font-size: 7px;
+    line-height: 1.5;
+  }
+
+  /* TYPES */
+
+  .qmsiso-cert-types {
+    padding: 27px 8px 32px;
+  }
+
+  .cert-type-card {
+    padding: 13px 11px;
+    border-radius: 6px;
+  }
+
+  .cert-type-card h3 {
+    gap: 5px;
+    font-size: 9px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 11px;
+  }
+
+  .cert-type-card p {
+    margin-bottom: 7px;
+    font-size: 7px;
+  }
+
+  .cert-type-card ul li {
+    gap: 4px;
+    margin-bottom: 4px;
+    font-size: 6.5px;
+  }
+
+  .cert-type-card ul li i {
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 280px) {
+  /* CTA */
+
+  .qmsiso-cert-cta {
+    padding: 25px 6px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 15px;
+  }
+
+  .qmsiso-cert-cta-btn {
+    max-width: 200px;
+    height: 31px;
+    padding: 0 10px;
+    font-size: 7.5px;
+    border-radius: 5px;
+  }
+
+  /* INTRO */
+
+  .qmsiso-cert-intro {
+    padding: 25px 6px 28px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 5px;
+    letter-spacing: 0.6px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 14px;
+  }
+
+  .qmsiso-cert-intro-content p {
+    font-size: 6px;
+    line-height: 1.45;
+  }
+
+  /* TYPES */
+
+  .qmsiso-cert-types {
+    padding: 23px 6px 28px;
+  }
+
+  .cert-type-card {
+    padding: 11px 9px;
+    border-radius: 5px;
+  }
+
+  .cert-type-card h3 {
+    gap: 4px;
+    font-size: 7.5px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 9px;
+  }
+
+  .cert-type-card p {
+    font-size: 6px;
+    line-height: 1.45;
+  }
+
+  .cert-type-card ul li {
+    font-size: 5.5px;
+    line-height: 1.4;
+  }
+
+  .cert-type-card ul li i {
+    font-size: 6px;
+  }
+}
+
+@media (max-width: 240px) {
+  /* CTA */
+
+  .qmsiso-cert-cta {
+    padding: 21px 4px;
+  }
+
+  .qmsiso-cert-cta-content h2 {
+    font-size: 12px;
+  }
+
+  .qmsiso-cert-cta-btn {
+    max-width: 175px;
+    height: 28px;
+    padding: 0 7px;
+    font-size: 6px;
+    border-radius: 4px;
+  }
+
+  .qmsiso-cert-cta-btn i {
+    font-size: 6px;
+  }
+
+  /* INTRO */
+
+  .qmsiso-cert-intro {
+    padding: 21px 4px 24px;
+  }
+
+  .qmsiso-cert-subtitle {
+    font-size: 4.5px;
+    letter-spacing: 0.4px;
+  }
+
+  .qmsiso-cert-intro-content h2 {
+    font-size: 11px;
+  }
+
+  .qmsiso-cert-intro-content p {
+    margin-top: 5px;
+    font-size: 4.8px;
+    line-height: 1.4;
+  }
+
+  /* TYPES */
+
+  .qmsiso-cert-types {
+    padding: 20px 4px 24px;
+  }
+
+  .cert-type-card {
+    padding: 9px 7px;
+    border-radius: 4px;
+  }
+
+  .cert-type-card h3 {
+    gap: 3px;
+    font-size: 6px;
+  }
+
+  .cert-type-card h3 i {
+    font-size: 7px;
+  }
+
+  .cert-type-card p {
+    margin-bottom: 5px;
+    font-size: 5px;
+    line-height: 1.35;
+  }
+
+  .cert-type-card ul li {
+    gap: 3px;
+    margin-bottom: 3px;
+    font-size: 4.5px;
+    line-height: 1.35;
+  }
+
+  .cert-type-card ul li i {
+    margin-top: 1px;
+    font-size: 5px;
+  }
+}
+/* =========================================================
+   ISO STANDARD CARDS
+   BUSINESS COMPLIANCE
+========================================================= */
+
+
+@media (max-width: 1200px) {
+  /* ================= ISO STANDARD CARDS ================= */
+
+  .iso-standard-card {
+    border-radius: 10px;
+    padding-bottom: 17px;
+  }
+
+  .iso-standard-card .service-image {
+    height: 138px;
+    padding: 16px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .iso-standard-card h3 {
+    margin: 16px 16px 5px;
+    font-size: 17px;
+  }
+
+  .iso-card-type {
+    margin: 0 16px 11px;
+    font-size: 10.5px;
+  }
+
+  .iso-standard-card > p {
+    margin: 0 16px;
+    font-size: 12.5px;
+    min-height: 118px;
+  }
+
+  .iso-card-bottom {
+    margin-left: 16px;
+    margin-right: 16px;
+    padding-top: 14px;
+    gap: 10px;
+  }
+
+  .iso-price {
+    font-size: 17px;
+  }
+
+  .iso-quote-btn {
+    padding: 9px 13px;
+    font-size: 12px;
+  }
+
+  /* ================= COMPLIANCE ================= */
+
+  .qmsiso-compliance-section {
+    padding: 52px 20px 55px;
+  }
+
+  .compliance-heading {
+    max-width: 780px;
+  }
+
+  .compliance-subtitle {
+    font-size: 11px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 42px;
+  }
+
+  .compliance-heading p {
+    max-width: 680px;
+    font-size: 13px;
+  }
+
+  /* ================= COMPLIANCE SERVICES ================= */
+
+  .qmsiso-compliance-services {
+    padding: 18px 20px 55px;
+  }
+
+  .compliance-card {
+    border-radius: 10px;
+  }
+
+  .compliance-image {
+    height: 135px;
+    padding: 18px;
+  }
+
+  .compliance-image img {
+    width: 105px;
+    height: 105px;
+  }
+
+  .compliance-content {
+    padding: 16px 16px 17px;
+  }
+
+  .compliance-content h3 {
+    font-size: 16px;
+  }
+
+  .compliance-content p {
+    font-size: 12.5px;
+    min-height: 90px;
+  }
+
+  .compliance-price {
+    font-size: 20px;
+  }
+
+  .compliance-quote-btn {
+    padding: 9px 15px;
+    font-size: 12px;
+  }
+
+  .compliance-cta {
+    padding-top: 27px;
+  }
+}
+
+@media (max-width: 1100px) {
+  /* ISO CARDS */
+
+  .iso-standard-card .service-image {
+    height: 130px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 94px;
+    height: 94px;
+  }
+
+  .iso-standard-card h3 {
+    font-size: 16px;
+  }
+
+  .iso-card-type {
+    font-size: 10px;
+  }
+
+  .iso-standard-card > p {
+    font-size: 12px;
+    min-height: 110px;
+  }
+
+  .iso-price {
+    font-size: 16px;
+  }
+
+  .iso-price small {
+    font-size: 9px;
+  }
+
+  .iso-quote-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  /* COMPLIANCE */
+
+  .qmsiso-compliance-section {
+    padding: 48px 20px 52px;
+  }
+
+  .compliance-heading {
+    max-width: 720px;
+  }
+
+  .compliance-subtitle {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 39px;
+  }
+
+  .compliance-heading p {
+    max-width: 620px;
+    font-size: 12px;
+  }
+
+  /* COMPLIANCE SERVICES */
+
+  .qmsiso-compliance-services {
+    padding: 17px 20px 50px;
+  }
+
+  .compliance-image {
+    height: 128px;
+  }
+
+  .compliance-image img {
+    width: 98px;
+    height: 98px;
+  }
+
+  .compliance-content {
+    padding: 15px;
+  }
+
+  .compliance-content h3 {
+    font-size: 15px;
+  }
+
+  .compliance-content p {
+    font-size: 11.5px;
+    min-height: 85px;
+  }
+
+  .compliance-price {
+    font-size: 19px;
+  }
+
+  .compliance-price small {
+    font-size: 9px;
+  }
+
+  .compliance-quote-btn {
+    padding: 8px 13px;
+    font-size: 11px;
+  }
+
+  .compliance-cta {
+    padding-top: 25px;
+  }
+
+  .compliance-cta .qmsiso-cert-cta-btn {
+    min-width: 270px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* ================= ISO STANDARD ================= */
+
+  .iso-standard-card {
+    border-radius: 9px;
+  }
+
+  .iso-standard-card .service-image {
+    height: 125px;
+    padding: 14px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .iso-standard-card h3 {
+    margin: 14px 14px 5px;
+    font-size: 15px;
+  }
+
+  .iso-card-type {
+    margin: 0 14px 10px;
+    font-size: 9.5px;
+  }
+
+  .iso-standard-card > p {
+    margin: 0 14px;
+    font-size: 11px;
+    line-height: 1.55;
+    min-height: 100px;
+  }
+
+  .iso-card-bottom {
+    margin-left: 14px;
+    margin-right: 14px;
+    padding-top: 12px;
+    gap: 8px;
+  }
+
+  .iso-price {
+    font-size: 15px;
+  }
+
+  .iso-price small {
+    margin-top: 4px;
+    font-size: 8.5px;
+  }
+
+  .iso-quote-btn {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  /* ================= COMPLIANCE HEADING ================= */
+
+  .qmsiso-compliance-section {
+    padding: 45px 20px 48px;
+  }
+
+  .compliance-heading {
+    max-width: 650px;
+  }
+
+  .compliance-subtitle {
+    font-size: 9px;
+    letter-spacing: 1.3px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 34px;
+    letter-spacing: -1px;
+  }
+
+  .compliance-heading p {
+    max-width: 570px;
+    margin-top: 12px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+
+  /* ================= COMPLIANCE CARDS ================= */
+
+  .qmsiso-compliance-services {
+    padding: 15px 20px 45px;
+  }
+
+  .compliance-card {
+    border-radius: 9px;
+  }
+
+  .compliance-image {
+    height: 120px;
+    padding: 15px;
+  }
+
+  .compliance-image img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .compliance-content {
+    padding: 14px;
+  }
+
+  .compliance-content h3 {
+    font-size: 14px;
+    line-height: 1.3;
+  }
+
+  .compliance-content p {
+    font-size: 10.5px;
+    line-height: 1.55;
+    min-height: 78px;
+  }
+
+  .compliance-bottom {
+    gap: 8px;
+    padding-top: 12px;
+  }
+
+  .compliance-price {
+    font-size: 17px;
+  }
+
+  .compliance-price small {
+    font-size: 8px;
+  }
+
+  .compliance-quote-btn {
+    padding: 8px 10px;
+    font-size: 10px;
+  }
+
+  .compliance-cta {
+    padding-top: 23px;
+  }
+
+  .compliance-cta .qmsiso-cert-cta-btn {
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ================= ISO STANDARD ================= */
+
+  .iso-standard-card .service-image {
+    height: 115px;
+    padding: 12px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 82px;
+    height: 82px;
+  }
+
+  .iso-standard-card h3 {
+    margin: 12px 12px 4px;
+    font-size: 14px;
+  }
+
+  .iso-card-type {
+    margin: 0 12px 9px;
+    font-size: 9px;
+  }
+
+  .iso-standard-card > p {
+    margin: 0 12px;
+    font-size: 10px;
+    min-height: 88px;
+    line-height: 1.5;
+  }
+
+  .iso-card-bottom {
+    margin-left: 12px;
+    margin-right: 12px;
+    padding-top: 10px;
+    gap: 6px;
+  }
+
+  .iso-price {
+    font-size: 14px;
+  }
+
+  .iso-price small {
+    font-size: 7.5px;
+  }
+
+  .iso-quote-btn {
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+
+  /* ================= COMPLIANCE ================= */
+
+  .qmsiso-compliance-section {
+    padding: 40px 15px 43px;
+  }
+
+  .compliance-heading {
+    max-width: 580px;
+  }
+
+  .compliance-subtitle {
+    font-size: 8px;
+    letter-spacing: 1.1px;
+    margin-bottom: 7px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 29px;
+    line-height: 1.2;
+  }
+
+  .compliance-heading p {
+    max-width: 510px;
+    margin-top: 10px;
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  /* ================= COMPLIANCE SERVICES ================= */
+
+  .qmsiso-compliance-services {
+    padding: 14px 15px 40px;
+  }
+
+  .compliance-image {
+    height: 110px;
+    padding: 12px;
+  }
+
+  .compliance-image img {
+    width: 82px;
+    height: 82px;
+  }
+
+  .compliance-content {
+    padding: 13px;
+  }
+
+  .compliance-content h3 {
+    font-size: 12.5px;
+  }
+
+  .compliance-content p {
+    font-size: 9.5px;
+    min-height: 70px;
+  }
+
+  .compliance-price {
+    font-size: 15px;
+  }
+
+  .compliance-price small {
+    font-size: 7.5px;
+  }
+
+  .compliance-quote-btn {
+    padding: 7px 9px;
+    font-size: 9px;
+  }
+
+  .compliance-cta {
+    padding-top: 20px;
+  }
+
+  .compliance-cta .qmsiso-cert-cta-btn {
+    min-width: 225px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* ================= ISO STANDARD ================= */
+
+  .iso-standard-card {
+    border-radius: 8px;
+    padding-bottom: 15px;
+  }
+
+  .iso-standard-card .service-image {
+    height: 125px;
+    padding: 14px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .iso-standard-card h3 {
+    margin: 14px 14px 5px;
+    font-size: 15px;
+  }
+
+  .iso-card-type {
+    margin: 0 14px 10px;
+    font-size: 9px;
+  }
+
+  .iso-standard-card > p {
+    margin: 0 14px;
+    font-size: 10px;
+    min-height: auto;
+    line-height: 1.6;
+  }
+
+  .iso-card-bottom {
+    margin: 14px 14px 0;
+    padding-top: 12px;
+    gap: 10px;
+  }
+
+  .iso-price {
+    font-size: 16px;
+  }
+
+  .iso-price small {
+    font-size: 8px;
+  }
+
+  .iso-quote-btn {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  /* ================= COMPLIANCE ================= */
+
+  .qmsiso-compliance-section {
+    padding: 36px 12px 40px;
+  }
+
+  .compliance-subtitle {
+    font-size: 7.5px;
+    letter-spacing: 0.9px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .compliance-heading p {
+    max-width: 450px;
+    font-size: 9px;
+    line-height: 1.55;
+  }
+
+  /* ================= COMPLIANCE SERVICES ================= */
+
+  .qmsiso-compliance-services {
+    padding: 12px 12px 36px;
+  }
+
+  .compliance-card {
+    border-radius: 8px;
+  }
+
+  .compliance-image {
+    height: 125px;
+    padding: 15px;
+  }
+
+  .compliance-image img {
+    width: 90px;
+    height: 90px;
+  }
+
+  .compliance-content {
+    padding: 14px;
+  }
+
+  .compliance-content h3 {
+    font-size: 13px;
+  }
+
+  .compliance-content p {
+    font-size: 9.5px;
+    min-height: auto;
+    line-height: 1.6;
+  }
+
+  .compliance-bottom {
+    margin-top: 13px;
+    padding-top: 12px;
+  }
+
+  .compliance-price {
+    font-size: 17px;
+  }
+
+  .compliance-price small {
+    font-size: 8px;
+  }
+
+  .compliance-quote-btn {
+    padding: 8px 12px;
+    font-size: 10px;
+  }
+
+  .compliance-cta {
+    padding-top: 20px;
+  }
+
+  .compliance-cta .qmsiso-cert-cta-btn {
+    width: 100%;
+    max-width: 280px;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  /* ISO STANDARD */
+
+  .iso-standard-card .service-image {
+    height: 115px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 82px;
+    height: 82px;
+  }
+
+  .iso-standard-card h3 {
+    font-size: 14px;
+  }
+
+  .iso-card-type {
+    font-size: 8px;
+  }
+
+  .iso-standard-card > p {
+    font-size: 9px;
+  }
+
+  .iso-price {
+    font-size: 15px;
+  }
+
+  .iso-quote-btn {
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  /* COMPLIANCE */
+
+  .qmsiso-compliance-section {
+    padding: 32px 10px 35px;
+  }
+
+  .compliance-subtitle {
+    font-size: 6.5px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 21px;
+  }
+
+  .compliance-heading p {
+    font-size: 8px;
+  }
+
+  .qmsiso-compliance-services {
+    padding: 10px 10px 32px;
+  }
+
+  .compliance-image {
+    height: 115px;
+  }
+
+  .compliance-image img {
+    width: 82px;
+    height: 82px;
+  }
+
+  .compliance-content {
+    padding: 12px;
+  }
+
+  .compliance-content h3 {
+    font-size: 11px;
+  }
+
+  .compliance-content p {
+    font-size: 8.5px;
+  }
+
+  .compliance-price {
+    font-size: 15px;
+  }
+
+  .compliance-price small {
+    font-size: 7px;
+  }
+
+  .compliance-quote-btn {
+    padding: 7px 10px;
+    font-size: 9px;
+  }
+
+  .compliance-cta .qmsiso-cert-cta-btn {
+    max-width: 250px;
+    height: 37px;
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  /* ISO STANDARD */
+
+  .iso-standard-card {
+    border-radius: 7px;
+  }
+
+  .iso-standard-card .service-image {
+    height: 105px;
+    padding: 10px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .iso-standard-card h3 {
+    margin: 11px 11px 4px;
+    font-size: 12px;
+  }
+
+  .iso-card-type {
+    margin: 0 11px 8px;
+    font-size: 7px;
+  }
+
+  .iso-standard-card > p {
+    margin: 0 11px;
+    font-size: 7.5px;
+    line-height: 1.5;
+  }
+
+  .iso-card-bottom {
+    margin-left: 11px;
+    margin-right: 11px;
+    padding-top: 9px;
+  }
+
+  .iso-price {
+    font-size: 13px;
+  }
+
+  .iso-price small {
+    font-size: 6.5px;
+  }
+
+  .iso-quote-btn {
+    padding: 6px 8px;
+    font-size: 7.5px;
+  }
+
+  /* COMPLIANCE */
+
+  .qmsiso-compliance-section {
+    padding: 28px 8px 31px;
+  }
+
+  .compliance-subtitle {
+    font-size: 5.5px;
+    letter-spacing: 0.7px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 18px;
+  }
+
+  .compliance-heading p {
+    margin-top: 7px;
+    font-size: 7px;
+    line-height: 1.5;
+  }
+
+  .qmsiso-compliance-services {
+    padding: 8px 8px 28px;
+  }
+
+  .compliance-image {
+    height: 105px;
+  }
+
+  .compliance-image img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .compliance-content {
+    padding: 10px;
+  }
+
+  .compliance-content h3 {
+    font-size: 9.5px;
+  }
+
+  .compliance-content p {
+    font-size: 7px;
+    line-height: 1.5;
+  }
+
+  .compliance-bottom {
+    gap: 6px;
+    padding-top: 9px;
+  }
+
+  .compliance-price {
+    font-size: 13px;
+  }
+
+  .compliance-price small {
+    font-size: 6px;
+  }
+
+  .compliance-quote-btn {
+    padding: 6px 8px;
+    font-size: 7px;
+  }
+
+  .compliance-cta {
+    padding-top: 15px;
+  }
+
+  .compliance-cta .qmsiso-cert-cta-btn {
+    max-width: 210px;
+    height: 33px;
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 280px) {
+  /* ISO STANDARD */
+
+  .iso-standard-card .service-image {
+    height: 90px;
+    padding: 8px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .iso-standard-card h3 {
+    margin: 9px 9px 3px;
+    font-size: 10px;
+  }
+
+  .iso-card-type {
+    margin: 0 9px 7px;
+    font-size: 6px;
+  }
+
+  .iso-standard-card > p {
+    margin: 0 9px;
+    font-size: 6px;
+    line-height: 1.4;
+  }
+
+  .iso-card-bottom {
+    margin-left: 9px;
+    margin-right: 9px;
+    padding-top: 7px;
+    gap: 5px;
+  }
+
+  .iso-price {
+    font-size: 11px;
+  }
+
+  .iso-price small {
+    font-size: 5.5px;
+  }
+
+  .iso-quote-btn {
+    padding: 5px 6px;
+    font-size: 6px;
+  }
+
+  /* COMPLIANCE */
+
+  .qmsiso-compliance-section {
+    padding: 24px 6px 27px;
+  }
+
+  .compliance-subtitle {
+    font-size: 4.5px;
+    letter-spacing: 0.5px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 15px;
+    letter-spacing: -0.2px;
+  }
+
+  .compliance-heading p {
+    font-size: 6px;
+  }
+
+  .qmsiso-compliance-services {
+    padding: 6px 6px 24px;
+  }
+
+  .compliance-image {
+    height: 90px;
+    padding: 8px;
+  }
+
+  .compliance-image img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .compliance-content {
+    padding: 8px;
+  }
+
+  .compliance-content h3 {
+    font-size: 8px;
+  }
+
+  .compliance-content p {
+    font-size: 6px;
+    line-height: 1.4;
+  }
+
+  .compliance-bottom {
+    padding-top: 7px;
+    gap: 4px;
+  }
+
+  .compliance-price {
+    font-size: 10px;
+  }
+
+  .compliance-price small {
+    font-size: 5px;
+  }
+
+  .compliance-quote-btn {
+    padding: 5px 6px;
+    font-size: 6px;
+  }
+
+  .compliance-cta {
+    padding-top: 12px;
+  }
+
+  .compliance-cta .qmsiso-cert-cta-btn {
+    max-width: 180px;
+    height: 30px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 240px) {
+  /* ISO STANDARD */
+
+  .iso-standard-card .service-image {
+    height: 78px;
+  }
+
+  .iso-standard-card .service-image img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .iso-standard-card h3 {
+    margin: 7px 7px 3px;
+    font-size: 8px;
+  }
+
+  .iso-card-type {
+    margin: 0 7px 5px;
+    font-size: 5px;
+  }
+
+  .iso-standard-card > p {
+    margin: 0 7px;
+    font-size: 5px;
+    line-height: 1.35;
+  }
+
+  .iso-card-bottom {
+    margin-left: 7px;
+    margin-right: 7px;
+    padding-top: 6px;
+    gap: 3px;
+  }
+
+  .iso-price {
+    font-size: 9px;
+  }
+
+  .iso-price small {
+    font-size: 4.5px;
+  }
+
+  .iso-quote-btn {
+    padding: 4px 5px;
+    font-size: 5px;
+    border-radius: 3px;
+  }
+
+  /* COMPLIANCE */
+
+  .qmsiso-compliance-section {
+    padding: 20px 4px 22px;
+  }
+
+  .compliance-subtitle {
+    font-size: 4px;
+    letter-spacing: 0.3px;
+  }
+
+  .compliance-heading h2 {
+    font-size: 12px;
+  }
+
+  .compliance-heading p {
+    margin-top: 5px;
+    font-size: 4.8px;
+    line-height: 1.35;
+  }
+
+  .qmsiso-compliance-services {
+    padding: 5px 4px 20px;
+  }
+
+  .compliance-image {
+    height: 76px;
+    padding: 6px;
+  }
+
+  .compliance-image img {
+    width: 54px;
+    height: 54px;
+  }
+
+  .compliance-content {
+    padding: 7px;
+  }
+
+  .compliance-content h3 {
+    font-size: 6.5px;
+  }
+
+  .compliance-content p {
+    font-size: 5px;
+    line-height: 1.35;
+  }
+
+  .compliance-bottom {
+    padding-top: 6px;
+    gap: 3px;
+  }
+
+  .compliance-price {
+    font-size: 8px;
+  }
+
+  .compliance-price small {
+    font-size: 4px;
+  }
+
+  .compliance-quote-btn {
+    padding: 4px 5px;
+    font-size: 5px;
+  }
+
+  .compliance-cta {
+    padding-top: 10px;
+  }
+  .compliance-cta .qmsiso-cert-cta-btn {
+    max-width: 155px;
+    min-width: 0;
+    height: 27px;
+    font-size: 6px;
+  }
+}
+
+/* =========================================================
+   SAFETY - PREVENT HORIZONTAL OVERFLOW
+========================================================= */
+
+.iso-standard-card,
+.compliance-card,
+.iso-standard-card .service-image,
+.compliance-image,
+.iso-card-bottom,
+.compliance-bottom {
+  max-width: 100%;
+}
+
+.iso-standard-card img,
+.compliance-card img {
+  max-width: 100%;
+}
+
+.iso-standard-card button,
+.compliance-card button {
+  max-width: 100%;
+}
+
+/* =====================================================
+   QMSISO CONTACT PAGE
+===================================================== */
+
+@media (max-width: 1200px) {
+  .qmsiso-contact-page {
+    padding: 70px 20px;
+  }
+
+  .contact-info-wrapper {
+    gap: 16px;
+  }
+
+  .contact-info-card {
+    min-height: 115px;
+    padding: 20px 18px;
+    gap: 15px;
+  }
+
+  .contact-icon {
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
+  }
+
+  .contact-info-content h3 {
+    font-size: 15px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    font-size: 13px;
+  }
+
+  .contact-form-box {
+    padding: 28px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 992px) {
+  .qmsiso-contact-page {
+    padding: 60px 20px;
+  }
+
+  .contact-info-wrapper {
+    height: auto;
+    margin-bottom: 25px;
+    gap: 15px;
+  }
+
+  .contact-info-card {
+    min-height: 105px;
+    padding: 18px;
+  }
+
+  .contact-icon {
+    width: 46px;
+    height: 46px;
+    font-size: 18px;
+  }
+
+  .contact-info-content h3 {
+    font-size: 15px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    font-size: 13px;
+  }
+
+  .contact-form-box {
+    height: auto;
+    padding: 28px;
+  }
+
+  .contact-form-heading {
+    margin-bottom: 20px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 23px;
+  }
+
+  .contact-form-heading p {
+    font-size: 12.5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .qmsiso-contact-page {
+    padding: 50px 16px;
+  }
+
+  .contact-info-wrapper {
+    margin-bottom: 22px;
+    gap: 14px;
+  }
+
+  .contact-info-card {
+    min-height: 100px;
+    padding: 17px;
+    gap: 14px;
+    border-radius: 8px;
+  }
+
+  .contact-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 17px;
+    border-radius: 7px;
+  }
+
+  .contact-info-content h3 {
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .contact-form-box {
+    padding: 25px 22px;
+    border-radius: 8px;
+  }
+
+  .contact-form-heading span {
+    font-size: 11px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 22px;
+  }
+
+  .contact-form-heading p {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .contact-field {
+    margin-bottom: 12px;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    height: 42px;
+    font-size: 12.5px;
+  }
+
+  .contact-field textarea {
+    min-height: 100px;
+    font-size: 12.5px;
+  }
+
+  .contact-submit-btn {
+    height: 44px;
+    font-size: 13px;
+  }
+
+  .contact-note {
+    font-size: 10px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .qmsiso-contact-page {
+    padding: 42px 14px;
+  }
+
+  .contact-info-wrapper {
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+
+  .contact-info-card {
+    min-height: 92px;
+    padding: 15px;
+    gap: 12px;
+  }
+
+  .contact-icon {
+    width: 42px;
+    height: 42px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+  .contact-info-content {
+    min-width: 0;
+    flex: 1;
+  }
+
+  .contact-info-content h3 {
+    font-size: 13.5px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    display: block;
+    max-width: 100%;
+    font-size: 11.5px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .contact-form-box {
+    padding: 22px 17px;
+  }
+
+  .contact-form-heading {
+    margin-bottom: 18px;
+  }
+
+  .contact-form-heading span {
+    margin-bottom: 6px;
+    font-size: 10px;
+    letter-spacing: 1.3px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+
+  .contact-form-heading p {
+    font-size: 11.5px;
+    line-height: 1.6;
+  }
+
+  .contact-field {
+    margin-bottom: 10px;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    height: 41px;
+    padding: 0 12px;
+    font-size: 12px;
+  }
+
+  .contact-field textarea {
+    min-height: 95px;
+    padding: 11px 12px;
+    font-size: 12px;
+  }
+
+  .contact-error {
+    font-size: 10px;
+    margin-top: 3px;
+  }
+
+  .contact-submit-btn {
+    height: 43px;
+    font-size: 12.5px;
+    gap: 7px;
+  }
+
+  .contact-submit-btn i {
+    font-size: 11px;
+  }
+
+  .contact-note {
+    font-size: 9.5px;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 400px) {
+  .qmsiso-contact-page {
+    padding: 35px 10px;
+  }
+
+  .contact-info-wrapper {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .contact-info-card {
+    min-height: 82px;
+    padding: 12px;
+    gap: 10px;
+    border-radius: 7px;
+  }
+
+  .contact-icon {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+
+  .contact-info-content h3 {
+    font-size: 12.5px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    font-size: 10.5px;
+  }
+
+  .contact-form-box {
+    padding: 19px 13px;
+    border-radius: 7px;
+  }
+
+  .contact-form-heading {
+    margin-bottom: 16px;
+  }
+
+  .contact-form-heading span {
+    font-size: 9.5px;
+    letter-spacing: 1px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 18px;
+  }
+
+  .contact-form-heading p {
+    font-size: 10.5px;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    height: 39px;
+    padding: 0 10px;
+    font-size: 11px;
+  }
+
+  .contact-field textarea {
+    min-height: 85px;
+    padding: 10px;
+    font-size: 11px;
+  }
+
+  .contact-submit-btn {
+    height: 41px;
+    font-size: 11.5px;
+  }
+
+  .contact-note {
+    font-size: 8.5px;
+  }
+}
+
+@media (max-width: 320px) {
+  .qmsiso-contact-page {
+    padding: 30px 8px;
+  }
+
+  .contact-info-wrapper {
+    gap: 8px;
+  }
+
+  .contact-info-card {
+    min-height: 75px;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .contact-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .contact-info-content h3 {
+    font-size: 11.5px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    font-size: 9.5px;
+  }
+
+  .contact-form-box {
+    padding: 16px 10px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 16px;
+  }
+
+  .contact-form-heading p {
+    font-size: 9.5px;
+  }
+
+  .contact-field {
+    margin-bottom: 8px;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    height: 37px;
+    padding: 0 8px;
+    font-size: 10px;
+  }
+
+  .contact-field textarea {
+    min-height: 75px;
+    padding: 8px;
+    font-size: 10px;
+  }
+
+  .contact-submit-btn {
+    height: 39px;
+    font-size: 10.5px;
+  }
+}
+
+@media (max-width: 260px) {
+  .qmsiso-contact-page {
+    padding: 25px 6px;
+  }
+
+  .contact-info-card {
+    padding: 8px;
+    gap: 7px;
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+    font-size: 11px;
+  }
+
+  .contact-info-content h3 {
+    font-size: 10px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    font-size: 8.5px;
+  }
+
+  .contact-form-box {
+    padding: 13px 8px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 14px;
+  }
+
+  .contact-form-heading p {
+    font-size: 8.5px;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    height: 34px;
+    padding: 0 7px;
+    font-size: 9px;
+  }
+
+  .contact-field textarea {
+    min-height: 65px;
+    font-size: 9px;
+  }
+
+  .contact-submit-btn {
+    height: 36px;
+    font-size: 9.5px;
+  }
+}
+
+@media (max-width: 200px) {
+  .qmsiso-contact-page {
+    padding: 20px 4px;
+  }
+
+  .contact-info-card {
+    padding: 7px;
+    gap: 6px;
+  }
+
+  .contact-icon {
+    width: 27px;
+    height: 27px;
+    font-size: 10px;
+  }
+
+  .contact-info-content h3 {
+    font-size: 9px;
+  }
+
+  .contact-info-content p,
+  .contact-info-content a {
+    font-size: 7.5px;
+  }
+
+  .contact-form-box {
+    padding: 10px 6px;
+  }
+
+  .contact-form-heading h2 {
+    font-size: 12px;
+  }
+
+  .contact-form-heading p {
+    font-size: 8px;
+  }
+
+  .contact-field input,
+  .contact-field select {
+    height: 32px;
+    padding: 0 6px;
+    font-size: 8px;
+  }
+
+  .contact-field textarea {
+    min-height: 60px;
+    font-size: 8px;
+  }
+
+  .contact-submit-btn {
+    height: 34px;
+    font-size: 8.5px;
+  }
+
+  .contact-note {
+    font-size: 7px;
+  }
+}
+
+/* =========================================================
+   QMSISO FOOTER RESPONSIVE
+========================================================= */
+
+@media (max-width: 1400px) {
+  .qmsiso-footer {
+    padding-top: 55px;
+  }
+
+  .footer-main {
+    padding-bottom: 32px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .footer-brand p {
+    max-width: 430px;
+    font-size: 12.5px;
+  }
+
+  .footer-map {
+    max-width: 430px;
+    height: 190px;
+  }
+
+  .footer-column {
+    margin-left: 5px;
+  }
+
+  .footer-column ul li a {
+    font-size: 12.5px;
+  }
+
+  .footer-bottom-links {
+    gap: 17px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .qmsiso-footer {
+    padding-top: 50px;
+  }
+
+  .footer-main {
+    padding-bottom: 30px;
+  }
+
+  .footer-logo {
+    margin-bottom: 13px;
+  }
+
+  .footer-logo img {
+    width: 145px;
+  }
+
+  .footer-brand p {
+    max-width: 380px;
+    font-size: 12px;
+    line-height: 1.75;
+  }
+
+  .footer-map {
+    max-width: 380px;
+    height: 180px;
+  }
+
+  .footer-column {
+    margin-left: 0;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 11.5px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+
+  .footer-contact {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .footer-contact a {
+    font-size: 11.5px;
+  }
+
+  .footer-bottom {
+    min-height: 72px;
+    gap: 20px;
+  }
+
+  .footer-bottom-left p,
+  .footer-bottom-links a {
+    font-size: 10.5px;
+  }
+
+  .footer-bottom-links {
+    gap: 15px;
+  }
+
+  .footer-whatsapp {
+    left: 18px;
+    bottom: 18px;
+    width: 50px;
+    height: 50px;
+    font-size: 26px;
+  }
+
+  .footer-chat {
+    right: 18px;
+    bottom: 18px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .qmsiso-footer {
+    padding-top: 45px;
+  }
+
+  .footer-main {
+    padding-bottom: 25px;
+  }
+
+  /* Brand */
+
+  .footer-brand {
+    margin-bottom: 30px;
+  }
+
+  .footer-logo img {
+    width: 145px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+  }
+
+  /* Map */
+
+  .footer-map {
+    width: 100%;
+    max-width: 100%;
+    height: 210px;
+  }
+
+  /* Columns */
+
+  .footer-column {
+    margin-left: 0;
+    padding-top: 5px;
+    margin-bottom: 25px;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 15px;
+    font-size: 12px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 9px;
+  }
+
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+
+  .footer-contact {
+    margin-top: 17px;
+  }
+
+  .footer-contact a {
+    font-size: 12px;
+  }
+
+  /* Bottom */
+
+  .footer-bottom {
+    min-height: auto;
+    padding: 18px 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .footer-bottom-left {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-disclaimer {
+    max-width: 100%;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 11px;
+  }
+
+  /* Floating buttons */
+
+  .footer-whatsapp {
+    left: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 24px;
+  }
+
+  .footer-chat {
+    right: 16px;
+    bottom: 16px;
+    width: 48px;
+    height: 48px;
+    font-size: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  .qmsiso-footer {
+    padding-top: 40px;
+  }
+
+  .footer-main {
+    padding-bottom: 20px;
+  }
+
+  /* Brand */
+
+  .footer-brand {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .footer-logo {
+    justify-content: center;
+    margin-bottom: 14px;
+  }
+
+  .footer-logo img {
+    width: 140px;
+  }
+
+  .footer-brand p {
+    max-width: 100%;
+    margin: 0 auto 18px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  /* Map */
+  .footer-map {
+    height: 190px;
+    border-radius: 7px;
+  }
+
+  /* Footer columns */
+  .footer-column {
+    text-align: center;
+    padding-top: 0;
+    margin-bottom: 28px;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 14px;
+    font-size: 12px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+
+  .footer-column ul li a {
+    font-size: 12px;
+  }
+
+  .footer-column ul li a:hover {
+    padding-left: 0;
+  }
+
+  /* Contact */
+
+  .footer-contact {
+    align-items: center;
+    margin-top: 17px;
+    gap: 8px;
+  }
+
+  .footer-contact a {
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  /* Bottom */
+
+  .footer-bottom {
+    padding: 17px 12px;
+    gap: 11px;
+  }
+
+  .footer-bottom-left {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .footer-bottom-left p {
+    font-size: 10px;
+    line-height: 1.6;
+  }
+
+  .footer-bottom-links {
+    width: 100%;
+    gap: 8px 15px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 10px;
+  }
+
+  /* Floating buttons */
+
+  .footer-whatsapp {
+    left: 13px;
+    bottom: 13px;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+  .footer-chat {
+    right: 13px;
+    bottom: 13px;
+    width: 45px;
+    height: 45px;
+    font-size: 18px;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .qmsiso-footer {
+    padding-top: 35px;
+  }
+
+  .footer-main {
+    padding-bottom: 15px;
+  }
+
+  .footer-brand {
+    margin-bottom: 28px;
+  }
+
+  .footer-logo img {
+    width: 135px;
+  }
+
+  .footer-brand p {
+    font-size: 11.5px;
+    line-height: 1.75;
+  }
+
+  .footer-map {
+    height: 175px;
+  }
+
+  .footer-column {
+    margin-bottom: 25px;
+  }
+
+  .footer-column h4 {
+    font-size: 11.5px;
+    margin-bottom: 13px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 7px;
+  }
+
+  .footer-column ul li a {
+    font-size: 11.5px;
+  }
+
+  .footer-contact a {
+    font-size: 11.5px;
+  }
+
+  .footer-bottom {
+    padding: 15px 10px;
+  }
+
+  .footer-bottom-left p {
+    font-size: 9.5px;
+  }
+
+  .footer-bottom-links {
+    gap: 7px 12px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 9.5px;
+  }
+
+  .footer-whatsapp {
+    left: 10px;
+    bottom: 10px;
+    width: 42px;
+    height: 42px;
+    font-size: 20px;
+  }
+
+  .footer-chat {
+    right: 10px;
+    bottom: 10px;
+    width: 42px;
+    height: 42px;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 479px) {
+  .qmsiso-footer {
+    padding-top: 32px;
+  }
+
+  .footer-main {
+    padding-bottom: 12px;
+  }
+
+  .footer-logo img {
+    width: 125px;
+  }
+
+  .footer-brand p {
+    font-size: 11px;
+    line-height: 1.7;
+  }
+
+  .footer-map {
+    height: 155px;
+    border-radius: 6px;
+  }
+
+  .footer-column {
+    margin-bottom: 23px;
+  }
+
+  .footer-column h4 {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 6px;
+  }
+
+  .footer-column ul li a {
+    font-size: 11px;
+  }
+
+  .footer-contact {
+    gap: 7px;
+  }
+
+  .footer-contact a {
+    font-size: 11px;
+  }
+
+  .footer-contact a i {
+    width: 13px;
+  }
+
+  .footer-bottom {
+    padding: 14px 8px;
+    gap: 9px;
+  }
+
+  .footer-bottom-left p {
+    font-size: 9px;
+  }
+
+  .footer-bottom-links {
+    gap: 6px 10px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 9px;
+  }
+
+  .footer-whatsapp {
+    left: 8px;
+    bottom: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 19px;
+  }
+
+  .footer-chat {
+    right: 8px;
+    bottom: 8px;
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 319px) {
+  .qmsiso-footer {
+    padding-top: 28px;
+  }
+
+  .footer-logo img {
+    width: 110px;
+  }
+
+  .footer-brand p {
+    font-size: 10px;
+    line-height: 1.65;
+  }
+
+  .footer-map {
+    height: 130px;
+  }
+
+  .footer-column {
+    margin-bottom: 20px;
+  }
+
+  .footer-column h4 {
+    font-size: 10px;
+    letter-spacing: 0.8px;
+  }
+
+  .footer-column ul li {
+    margin-bottom: 5px;
+  }
+
+  .footer-column ul li a {
+    font-size: 10px;
+  }
+
+  .footer-contact {
+    gap: 6px;
+  }
+
+  .footer-contact a {
+    font-size: 10px;
+  }
+
+  .footer-bottom {
+    padding: 12px 6px;
+    gap: 8px;
+  }
+
+  .footer-bottom-left p {
+    font-size: 8px;
+  }
+
+  .footer-bottom-links {
+    gap: 5px 8px;
+  }
+
+  .footer-bottom-links a {
+    font-size: 8px;
+  }
+
+  /* Floating buttons */
+  .footer-whatsapp {
+    left: 6px;
+    bottom: 6px;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+
+  .footer-chat {
+    right: 6px;
+    bottom: 6px;
+    width: 35px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 250px) {
+  .qmsiso-footer {
+    padding-top: 24px;
+  }
+
+  .footer-logo img {
+    width: 95px;
+  }
+
+  .footer-brand p {
+    font-size: 9px;
+  }
+
+  .footer-map {
+    height: 110px;
+  }
+
+  .footer-column h4 {
+    font-size: 9px;
+  }
+
+  .footer-column ul li a {
+    font-size: 9px;
+  }
+
+  .footer-contact a {
+    font-size: 9px;
+  }
+
+  .footer-bottom-left p,
+  .footer-bottom-links a {
+    font-size: 7.5px;
+  }
+
+  .footer-whatsapp {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .footer-chat {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+}
