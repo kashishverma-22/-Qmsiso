@@ -99,6 +99,7 @@ select {
 /* =========================================
    MAIN NAVBAR
 ========================================= */
+
 .main-navbar .navbar-nav {
   display: flex;
   align-items: center;
@@ -129,7 +130,6 @@ select {
   color: #0b1f3a !important;
 }
 
-/* Dropdown arrow */
 .main-navbar .navbar-nav .dropdown-toggle {
   color: #26364f !important;
 }
@@ -138,16 +138,31 @@ select {
   color: var(--navy) !important;
 }
 
-/* Bootstrap dropdown */
-.main-navbar .dropdown-menu {
-  display: none;
+.main-navbar .dropdown {
+  position: relative;
 }
 
-.main-navbar .dropdown:hover > .dropdown-menu {
+.main-navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 0 !important;
+  transform: translateY(10px);
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  box-shadow: 0 10px 35px rgba(11, 31, 58, 0.15);
+  z-index: 99999;
+}
+.main-navbar .dropdown:hover>.dropdown-menu {
   display: block;
 }
 
-/* Dropdown items */
+/* =========================================
+   DROPDOWN ITEMS
+========================================= */
+
 .main-navbar .dropdown-menu .dropdown-item {
   color: #26364f !important;
   display: block !important;
@@ -189,8 +204,6 @@ select {
   object-fit: contain;
 }
 
-/* NAV MENU */
-
 .navbar-collapse {
   align-items: center;
 }
@@ -220,12 +233,11 @@ select {
   vertical-align: 2px;
   font-size: 10px;
 }
-
 .dropdown-menu {
   border: none;
   border-radius: 8px;
   padding: 8px;
-  margin-top: 10px !important;
+  margin-top: 0 !important;
   box-shadow: 0 10px 35px rgba(11, 31, 58, 0.15);
 }
 
@@ -242,7 +254,6 @@ select {
   background: #aac7f8;
 }
 
-/* QUOTE BUTTON */
 .quote-btn {
   border: none;
   background: var(--gold);
@@ -260,8 +271,6 @@ select {
   color: #ffffff;
   transform: translateY(-1px);
 }
-
-/* MOBILE BUTTON */
 
 .mobile-toggle {
   display: none;
@@ -1785,7 +1794,7 @@ select {
   line-height: 1.35;
 }
 
-.iso-standard-card > p {
+.iso-standard-card>p {
   margin: 0 18px;
   color: #596574;
   font-size: 13.5px;
@@ -2157,6 +2166,7 @@ select {
   font-size: 13px;
   line-height: 1.6;
 }
+
 /* =========================================================
    INPUTS
 ========================================================= */
@@ -2240,6 +2250,7 @@ select {
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(15, 33, 59, 0.16);
 }
+
 .contact-note {
   margin: 12px auto 0;
   max-width: 520px;
@@ -2367,11 +2378,13 @@ select {
 
 .footer-contact a i {
   width: 15px;
- text-align: center;
+  text-align: center;
 }
+
 .footer-contact a:hover {
   color: #ffffff;
 }
+
 /* =========================================================
    FOOTER BOTTOM
 ========================================================= */
@@ -2451,6 +2464,7 @@ select {
   color: #ffffff;
   transform: translateY(-4px) scale(1.04);
 }
+
 .footer-chat {
   position: fixed;
   right: 22px;
@@ -2474,5 +2488,3 @@ select {
 .footer-chat:hover {
   transform: translateY(-4px) scale(1.04);
 }
-
-
