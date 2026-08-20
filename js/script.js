@@ -1,61 +1,99 @@
 /* =========================================================
-   QMSISO WEBSITE - COMPLETE JAVASCRIPT
-   Validation + Popup + Navbar + EmailJS Integration Support
-========================================================= */
+   QMSISO WEBSITE - COMPLETE FINAL JAVASCRIPT
+   ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
   /* =========================================================
-     HELPERS
+     COMMON HELPERS
   ========================================================= */
 
   const get = (id) => document.getElementById(id);
 
-  function setError(input, errorElement, message) {
-    if (!input || !errorElement) return;
+  function getField(form, selectors) {
+    if (!form) return null;
 
-    const field =
+    for (const selector of selectors) {
+      const element = form.querySelector(selector);
+
+      if (element) {
+        return element;
+      }
+    }
+
+    return null;
+  }
+
+  function getErrorElement(form, selectors) {
+    if (!form) return null;
+
+    for (const selector of selectors) {
+      const element = form.querySelector(selector);
+
+      if (element) {
+        return element;
+      }
+    }
+
+    return null;
+  }
+
+  function getFieldWrapper(input) {
+    if (!input) return null;
+
+    return (
       input.closest(".form-field") ||
       input.closest(".enquiry-field") ||
       input.closest(".contact-field") ||
-      input.closest(".form-group");
+      input.closest(".field") ||
+      input.parentElement
+    );
+  }
+
+  function setError(input, errorElement, message) {
+    if (!input) return;
+
+    const field = getFieldWrapper(input);
 
     if (field) {
       field.classList.add("has-error");
       field.classList.remove("has-success");
     }
 
-    errorElement.textContent = message;
+    if (errorElement) {
+      errorElement.textContent = message;
+    }
   }
 
   function setSuccess(input, errorElement) {
-    if (!input || !errorElement) return;
+    if (!input) return;
 
-    const field =
-      input.closest(".form-field") ||
-      input.closest(".enquiry-field") ||
-      input.closest(".contact-field") ||
-      input.closest(".form-group");
+    const field = getFieldWrapper(input);
 
     if (field) {
       field.classList.remove("has-error");
       field.classList.add("has-success");
     }
 
-    errorElement.textContent = "";
+    if (errorElement) {
+      errorElement.textContent = "";
+    }
   }
 
-  function clearValidation(form) {
-    if (!form) return;
+  function clearField(input, errorElement) {
+    if (!input) return;
 
-    form.querySelectorAll(".has-error, .has-success").forEach((field) => {
-      field.classList.remove("has-error", "has-success");
-    });
+    const field = getFieldWrapper(input);
 
-    form.querySelectorAll(".form-error, .contact-error").forEach((error) => {
-      error.textContent = "";
-    });
+    if (field) {
+      field.classList.remove("has-error");
+      field.classList.remove("has-success");
+    }
+
+    if (errorElement) {
+      errorElement.textContent = "";
+    }
   }
 
   function onlyNumbers(input, maxLength = 10) {
@@ -68,17 +106,98 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  function validIndianMobile(value) {
-    return /^[6-9][0-9]{9}$/.test(value);
+  function getSubmitButton(form) {
+    if (!form) return null;
+
+    return (
+      form.querySelector(".submit-btn") ||
+      form.querySelector(".form-submit-btn") ||
+      form.querySelector(".enquiry-submit-btn") ||
+      form.querySelector(".contact-submit-btn") ||
+      form.querySelector('button[type="submit"]')
+    );
   }
 
-  function validName(value) {
-    return /^[A-Za-z\s.'-]{3,}$/.test(value);
+  function setButtonLoading(button, text = "Sending...") {
+    if (!button) return;
+
+    button.disabled = true;
+
+    button.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> ' + text;
+  }
+
+  function restoreButton(form) {
+    const button = getSubmitButton(form);
+
+    if (!button) return;
+
+    button.disabled = false;
+
+    switch (form.id) {
+      case "quoteForm":
+        button.innerHTML =
+          'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      case "heroQuoteForm":
+        button.innerHTML =
+          'Request Consultation <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      case "quickEnquiryForm":
+        button.innerHTML =
+          'Submit Enquiry <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      case "contactForm":
+        button.innerHTML =
+          'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      default:
+        button.innerHTML =
+          'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
+    }
+  }
+
+  function clearFormStates(form) {
+    if (!form) return;
+
+    form.querySelectorAll(".has-error, .has-success").forEach(function (field) {
+      field.classList.remove("has-error", "has-success");
+    });
+
+    form
+      .querySelectorAll(
+        ".form-error, .contact-error, .enquiry-error, .error-message",
+      )
+      .forEach(function (error) {
+        error.textContent = "";
+      });
+  }
+
+  function resetForm(form) {
+    if (!form) return;
+
+    form.reset();
+    clearFormStates(form);
   }
 
   /* =========================================================
-     QUOTE POPUP
-  ========================================================= */
+     SEND FORM TO EMAILJS MAILER
+     ========================================================= */
+
+  function sendFormToMailer(data) {
+    document.dispatchEvent(
+      new CustomEvent("qmsiso:sendForm", {
+        detail: data,
+      }),
+    );
+  }
+
+  /* =========================================================
+     QMSISO QUOTE POPUP
+     ========================================================= */
 
   const quoteModal = get("quoteModal");
   const closeQuote = get("closeQuote");
@@ -89,26 +208,33 @@ document.addEventListener("DOMContentLoaded", function () {
     : null;
 
   function openQuotePopup(certificate = "") {
-    if (!quoteModal) return;
+    if (!quoteModal) {
+      console.error("QMSISO: #quoteModal not found.");
+      return;
+    }
 
-    if (quoteCertificate && certificate.trim() !== "") {
+    if (quoteCertificate && certificate && certificate.trim() !== "") {
       let found = false;
-      const searchValue = certificate.trim().toLowerCase();
 
-      Array.from(quoteCertificate.options).forEach((option) => {
+      const certificateText = certificate.trim().toLowerCase();
+
+      for (let i = 0; i < quoteCertificate.options.length; i++) {
+        const option = quoteCertificate.options[i];
+
         const optionValue = option.value.trim().toLowerCase();
         const optionText = option.textContent.trim().toLowerCase();
 
         if (
-          optionValue === searchValue ||
-          optionText === searchValue ||
-          optionValue.includes(searchValue) ||
-          searchValue.includes(optionValue)
+          optionValue === certificateText ||
+          optionText === certificateText ||
+          optionValue.includes(certificateText) ||
+          certificateText.includes(optionValue)
         ) {
-          quoteCertificate.value = option.value;
+          quoteCertificate.selectedIndex = i;
           found = true;
+          break;
         }
-      });
+      }
 
       if (!found) {
         const newOption = document.createElement("option");
@@ -139,8 +265,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   /* =========================================================
-     OPEN ALL QUOTE BUTTONS
-  ========================================================= */
+     ALL QUOTE BUTTONS
+     ========================================================= */
 
   const quoteOpenButtons = document.querySelectorAll(
     "#openQuote, " +
@@ -156,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ".final-quote-btn",
   );
 
-  quoteOpenButtons.forEach((button) => {
+  quoteOpenButtons.forEach(function (button) {
     button.addEventListener("click", function (event) {
       event.preventDefault();
 
@@ -165,10 +291,6 @@ document.addEventListener("DOMContentLoaded", function () {
       openQuotePopup(certificate);
     });
   });
-
-  /* =========================================================
-     CLOSE POPUP
-  ========================================================= */
 
   if (closeQuote) {
     closeQuote.addEventListener("click", closeQuotePopup);
@@ -193,103 +315,105 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =========================================================
-     POPUP QUOTE FORM
-  ========================================================= */
+     GENERIC FORM DATA COLLECTOR
+     ========================================================= */
+
+  function collectFormData(form, formName) {
+    if (!form) return null;
+
+    const nameInput = getField(form, [
+      "#fullName",
+      "#quickFullName",
+      "#contactName",
+      '[name="name"]',
+      '[name="full_name"]',
+      '[name="fullname"]',
+    ]);
+
+    const businessInput = getField(form, [
+      "#businessName",
+      "#quickBusinessName",
+      "#contactBusiness",
+      '[name="business"]',
+      '[name="business_name"]',
+      '[name="company"]',
+    ]);
+
+    const phoneInput = getField(form, [
+      "#mobileNumber",
+      "#quickMobileNumber",
+      "#contactMobile",
+      '[name="phone"]',
+      '[name="mobile"]',
+      '[name="mobile_number"]',
+    ]);
+
+    const emailInput = getField(form, [
+      "#email",
+      "#userEmail",
+      "#contactEmail",
+      "#quickEmail",
+      '[name="email"]',
+      'input[type="email"]',
+    ]);
+
+    const certificateInput = getField(form, [
+      "#certificate",
+      "#quickCertificate",
+      "#contactCertificate",
+      '[name="certificate"]',
+      '[name="certification"]',
+    ]);
+
+    const messageInput = getField(form, [
+      "#message",
+      "#contactMessage",
+      "#quickMessage",
+      '[name="message"]',
+      "textarea",
+    ]);
+
+    return {
+      form: form,
+      formName: formName,
+
+      name: nameInput ? nameInput.value.trim() : "",
+
+      business: businessInput ? businessInput.value.trim() : "",
+
+      phone: phoneInput ? phoneInput.value.trim() : "",
+
+      email: emailInput ? emailInput.value.trim() : "",
+
+      certificate: certificateInput ? certificateInput.value.trim() : "",
+
+      message: messageInput ? messageInput.value.trim() : "",
+    };
+  }
+
+  /* =========================================================
+     QUOTE FORM
+     ========================================================= */
 
   if (quoteForm) {
-    const popupName = quoteForm.querySelector('input[name="name"]');
-
-    const popupBusiness = quoteForm.querySelector('input[name="business"]');
-
-    const popupPhone = quoteForm.querySelector('input[name="phone"]');
-
-    const popupEmail = quoteForm.querySelector('input[name="email"]');
-
-    const popupCertificate = quoteForm.querySelector(
-      'select[name="certificate"]',
-    );
-
-    if (popupPhone) {
-      popupPhone.addEventListener("input", function () {
-        onlyNumbers(popupPhone);
-      });
-    }
-
     quoteForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      let valid = true;
+      const data = collectFormData(quoteForm, "Quote Request");
 
-      const name = popupName ? popupName.value.trim() : "";
-      const business = popupBusiness ? popupBusiness.value.trim() : "";
-      const phone = popupPhone ? popupPhone.value.trim() : "";
-      const email = popupEmail ? popupEmail.value.trim() : "";
-      const certificate = popupCertificate ? popupCertificate.value : "";
+      if (!data) return;
 
-      if (!validName(name)) {
-        alert(
-          name === ""
-            ? "Please enter your full name."
-            : "Please enter a valid name.",
-        );
-        valid = false;
-      }
+      const submitButton = getSubmitButton(quoteForm);
 
-      if (business.length < 2) {
-        alert("Please enter your business name.");
-        valid = false;
-      }
+      setButtonLoading(submitButton, "Sending...");
 
-      if (!validIndianMobile(phone)) {
-        alert("Please enter a valid 10-digit mobile number.");
-        valid = false;
-      }
-
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert("Please enter a valid email address.");
-        valid = false;
-      }
-
-      if (!certificate) {
-        alert("Please select an ISO certificate.");
-        valid = false;
-      }
-
-      if (!valid) return;
-
-      const submitButton = quoteForm.querySelector(".submit-btn");
-
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.innerHTML =
-          '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-      }
-
-      /*
-         EmailJS is handled by jsmailer.js.
-         This event tells jsmailer.js to send the form.
-      */
-
-      const emailEvent = new CustomEvent("qmsiso:sendForm", {
-        detail: {
-          form: quoteForm,
-          formName: "Free Quote Popup",
-          name: name,
-          business: business,
-          email: email,
-          phone: phone,
-          certificate: certificate,
-          message: "Quote request for " + certificate,
-        },
-      });
-
-      document.dispatchEvent(emailEvent);
+      sendFormToMailer(data);
     });
   }
 
   /* =========================================================
-     HERO FORM
-  ========================================================= */
+     HERO QUOTE FORM
+     ========================================================= */
 
   const heroQuoteForm = get("heroQuoteForm");
 
@@ -305,9 +429,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const certificateError = get("certificateError");
 
     function validateHeroName() {
+      if (!fullName) return true;
+
       const value = fullName.value.trim();
 
-      if (!value) {
+      if (value === "") {
         setError(fullName, fullNameError, "Please enter your full name.");
         return false;
       }
@@ -322,13 +448,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       setSuccess(fullName, fullNameError);
+
       return true;
     }
 
     function validateHeroBusiness() {
+      if (!businessName) return true;
+
       const value = businessName.value.trim();
 
-      if (!value) {
+      if (value === "") {
         setError(
           businessName,
           businessNameError,
@@ -347,13 +476,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       setSuccess(businessName, businessNameError);
+
       return true;
     }
 
     function validateHeroMobile() {
+      if (!mobileNumber) return true;
+
       const value = mobileNumber.value.trim();
 
-      if (!value) {
+      if (value === "") {
         setError(
           mobileNumber,
           mobileNumberError,
@@ -362,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return false;
       }
 
-      if (!validIndianMobile(value)) {
+      if (!/^[6-9][0-9]{9}$/.test(value)) {
         setError(
           mobileNumber,
           mobileNumberError,
@@ -372,11 +504,16 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       setSuccess(mobileNumber, mobileNumberError);
+
       return true;
     }
 
     function validateHeroCertificate() {
-      if (!certificate.value) {
+      if (!certificate) return true;
+
+      const value = certificate.value;
+
+      if (value === "") {
         setError(
           certificate,
           certificateError,
@@ -386,59 +523,59 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       setSuccess(certificate, certificateError);
+
       return true;
     }
 
     if (mobileNumber) {
       mobileNumber.addEventListener("input", function () {
-        onlyNumbers(mobileNumber);
+        onlyNumbers(mobileNumber, 10);
       });
     }
 
-    fullName.addEventListener("blur", validateHeroName);
-    businessName.addEventListener("blur", validateHeroBusiness);
-    mobileNumber.addEventListener("blur", validateHeroMobile);
-    certificate.addEventListener("change", validateHeroCertificate);
+    if (fullName) {
+      fullName.addEventListener("blur", validateHeroName);
+    }
+
+    if (businessName) {
+      businessName.addEventListener("blur", validateHeroBusiness);
+    }
+
+    if (mobileNumber) {
+      mobileNumber.addEventListener("blur", validateHeroMobile);
+    }
+
+    if (certificate) {
+      certificate.addEventListener("change", validateHeroCertificate);
+    }
 
     heroQuoteForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const valid =
-        validateHeroName() &&
-        validateHeroBusiness() &&
-        validateHeroMobile() &&
-        validateHeroCertificate();
+      const validName = validateHeroName();
+      const validBusiness = validateHeroBusiness();
+      const validMobile = validateHeroMobile();
+      const validCertificate = validateHeroCertificate();
 
-      if (!valid) return;
-
-      const submitButton = heroQuoteForm.querySelector(".form-submit-btn");
-
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.innerHTML =
-          '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
+      if (!validName || !validBusiness || !validMobile || !validCertificate) {
+        return;
       }
 
-      document.dispatchEvent(
-        new CustomEvent("qmsiso:sendForm", {
-          detail: {
-            form: heroQuoteForm,
-            formName: "Hero Consultation Form",
-            name: fullName.value.trim(),
-            business: businessName.value.trim(),
-            email: "",
-            phone: mobileNumber.value.trim(),
-            certificate: certificate.value,
-            message: "Request for free ISO consultation.",
-          },
-        }),
-      );
+      const data = collectFormData(heroQuoteForm, "Hero Consultation Request");
+
+      if (!data) return;
+
+      const submitButton = getSubmitButton(heroQuoteForm);
+
+      setButtonLoading(submitButton, "Sending...");
+
+      sendFormToMailer(data);
     });
   }
 
   /* =========================================================
      QUICK ENQUIRY FORM
-  ========================================================= */
+     ========================================================= */
 
   const quickEnquiryForm = get("quickEnquiryForm");
 
@@ -449,103 +586,105 @@ document.addEventListener("DOMContentLoaded", function () {
     const quickCertificate = get("quickCertificate");
 
     const quickFullNameError = get("quickFullNameError");
+
     const quickBusinessNameError = get("quickBusinessNameError");
+
     const quickMobileNumberError = get("quickMobileNumberError");
+
     const quickCertificateError = get("quickCertificateError");
 
     if (quickMobileNumber) {
       quickMobileNumber.addEventListener("input", function () {
-        onlyNumbers(quickMobileNumber);
+        onlyNumbers(quickMobileNumber, 10);
       });
     }
 
     quickEnquiryForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      let valid = true;
+      let isValid = true;
 
       [
         quickFullNameError,
         quickBusinessNameError,
         quickMobileNumberError,
         quickCertificateError,
-      ].forEach((error) => {
-        if (error) error.textContent = "";
+      ].forEach(function (error) {
+        if (error) {
+          error.textContent = "";
+        }
       });
 
-      const name = quickFullName.value.trim();
-      const business = quickBusinessName.value.trim();
-      const phone = quickMobileNumber.value.trim();
-      const certificate = quickCertificate.value;
+      if (!quickFullName || quickFullName.value.trim() === "") {
+        if (quickFullNameError) {
+          quickFullNameError.textContent = "Please enter your full name.";
+        }
 
-      if (name.length < 3) {
-        setError(
-          quickFullName,
-          quickFullNameError,
-          "Please enter your full name.",
-        );
-        valid = false;
+        isValid = false;
+      } else if (quickFullName.value.trim().length < 3) {
+        if (quickFullNameError) {
+          quickFullNameError.textContent =
+            "Name must contain at least 3 characters.";
+        }
+
+        isValid = false;
       }
 
-      if (business.length < 2) {
-        setError(
-          quickBusinessName,
-          quickBusinessNameError,
-          "Please enter your business name.",
-        );
-        valid = false;
+      if (!quickBusinessName || quickBusinessName.value.trim() === "") {
+        if (quickBusinessNameError) {
+          quickBusinessNameError.textContent =
+            "Please enter your business name.";
+        }
+
+        isValid = false;
       }
 
-      if (!validIndianMobile(phone)) {
-        setError(
-          quickMobileNumber,
-          quickMobileNumberError,
-          "Please enter a valid 10-digit mobile number.",
-        );
-        valid = false;
+      const mobileValue = quickMobileNumber
+        ? quickMobileNumber.value.trim()
+        : "";
+
+      if (mobileValue === "") {
+        if (quickMobileNumberError) {
+          quickMobileNumberError.textContent =
+            "Please enter your mobile number.";
+        }
+
+        isValid = false;
+      } else if (!/^[6-9][0-9]{9}$/.test(mobileValue)) {
+        if (quickMobileNumberError) {
+          quickMobileNumberError.textContent =
+            "Please enter a valid 10-digit mobile number.";
+        }
+
+        isValid = false;
       }
 
-      if (!certificate) {
-        setError(
-          quickCertificate,
-          quickCertificateError,
-          "Please select an ISO certification.",
-        );
-        valid = false;
+      if (!quickCertificate || quickCertificate.value === "") {
+        if (quickCertificateError) {
+          quickCertificateError.textContent =
+            "Please select an ISO certification.";
+        }
+
+        isValid = false;
       }
 
-      if (!valid) return;
+      if (!isValid) return;
 
-      const submitButton = quickEnquiryForm.querySelector(
-        ".enquiry-submit-btn",
-      );
+      const data = collectFormData(quickEnquiryForm, "Quick Enquiry");
 
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.innerHTML =
-          '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-      }
+      if (!data) return;
 
-      document.dispatchEvent(
-        new CustomEvent("qmsiso:sendForm", {
-          detail: {
-            form: quickEnquiryForm,
-            formName: "Quick Enquiry Form",
-            name: name,
-            business: business,
-            email: "",
-            phone: phone,
-            certificate: certificate,
-            message: "Quick enquiry for " + certificate,
-          },
-        }),
-      );
+      const submitButton = getSubmitButton(quickEnquiryForm);
+
+      setButtonLoading(submitButton, "Sending...");
+
+      sendFormToMailer(data);
     });
   }
 
   /* =========================================================
      CONTACT FORM
-  ========================================================= */
+     ========================================================= */
 
   const contactForm = get("contactForm");
 
@@ -554,16 +693,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactBusiness = get("contactBusiness");
     const contactMobile = get("contactMobile");
     const contactCertificate = get("contactCertificate");
-    const contactMessage = get("contactMessage");
 
     const contactNameError = get("contactNameError");
+
     const contactBusinessError = get("contactBusinessError");
+
     const contactMobileError = get("contactMobileError");
+
     const contactCertificateError = get("contactCertificateError");
 
     if (contactMobile) {
       contactMobile.addEventListener("input", function () {
-        onlyNumbers(contactMobile);
+        onlyNumbers(contactMobile, 10);
       });
     }
 
@@ -577,110 +718,115 @@ document.addEventListener("DOMContentLoaded", function () {
         contactBusinessError,
         contactMobileError,
         contactCertificateError,
-      ].forEach((error) => {
-        if (error) error.textContent = "";
+      ].forEach(function (error) {
+        if (error) {
+          error.textContent = "";
+        }
       });
 
-      const name = contactName.value.trim();
-      const business = contactBusiness.value.trim();
-      const phone = contactMobile.value.trim();
-      const certificate = contactCertificate.value;
-      const message = contactMessage.value.trim();
+      if (!contactName || contactName.value.trim() === "") {
+        if (contactNameError) {
+          contactNameError.textContent = "Please enter your full name.";
+        }
 
-      if (name.length < 3) {
-        setError(contactName, contactNameError, "Please enter your full name.");
+        valid = false;
+      } else if (contactName.value.trim().length < 3) {
+        if (contactNameError) {
+          contactNameError.textContent = "Name must be at least 3 characters.";
+        }
+
         valid = false;
       }
 
-      if (business.length < 2) {
-        setError(
-          contactBusiness,
-          contactBusinessError,
-          "Please enter your business name.",
-        );
+      if (!contactBusiness || contactBusiness.value.trim() === "") {
+        if (contactBusinessError) {
+          contactBusinessError.textContent = "Please enter your business name.";
+        }
+
         valid = false;
       }
 
-      if (!validIndianMobile(phone)) {
-        setError(
-          contactMobile,
-          contactMobileError,
-          "Please enter a valid 10-digit mobile number.",
-        );
-        valid = false;
+      if (contactMobile) {
+        const mobile = contactMobile.value.trim();
+
+        if (mobile === "") {
+          if (contactMobileError) {
+            contactMobileError.textContent = "Please enter your mobile number.";
+          }
+
+          valid = false;
+        } else if (!/^[6-9][0-9]{9}$/.test(mobile)) {
+          if (contactMobileError) {
+            contactMobileError.textContent =
+              "Please enter a valid 10-digit mobile number.";
+          }
+
+          valid = false;
+        }
       }
 
-      if (!certificate) {
-        setError(
-          contactCertificate,
-          contactCertificateError,
-          "Please select an ISO certification.",
-        );
+      if (contactCertificate && contactCertificate.value === "") {
+        if (contactCertificateError) {
+          contactCertificateError.textContent =
+            "Please select an ISO certification.";
+        }
+
         valid = false;
       }
 
       if (!valid) return;
 
-      const submitButton = contactForm.querySelector(".contact-submit-btn");
+      const data = collectFormData(contactForm, "Contact Form");
 
-      if (submitButton) {
-        submitButton.disabled = true;
-        submitButton.innerHTML =
-          '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-      }
+      if (!data) return;
 
-      document.dispatchEvent(
-        new CustomEvent("qmsiso:sendForm", {
-          detail: {
-            form: contactForm,
-            formName: "Contact Inquiry Form",
-            name: name,
-            business: business,
-            email: "",
-            phone: phone,
-            certificate: certificate,
-            message: message || "No additional message provided.",
-          },
-        }),
-      );
+      const submitButton = getSubmitButton(contactForm);
+
+      setButtonLoading(submitButton, "Sending...");
+
+      sendFormToMailer(data);
     });
   }
 
   /* =========================================================
      NAVBAR ACTIVE LINKS
-  ========================================================= */
+     ========================================================= */
 
   const navLinks = document.querySelectorAll(
     ".main-navbar .nav-link:not(.dropdown-toggle)",
   );
 
-  navLinks.forEach((link) => {
+  navLinks.forEach(function (link) {
     link.addEventListener("click", function () {
-      navLinks.forEach((item) => item.classList.remove("active"));
+      navLinks.forEach(function (item) {
+        item.classList.remove("active");
+      });
 
       this.classList.add("active");
     });
   });
 
   /* =========================================================
-     DROPDOWN ITEMS
-  ========================================================= */
+     DROPDOWN ACTIVE
+     ========================================================= */
 
   const dropdownItems = document.querySelectorAll(
     ".main-navbar .dropdown-item",
   );
 
-  dropdownItems.forEach((item) => {
+  dropdownItems.forEach(function (item) {
     item.addEventListener("click", function () {
-      navLinks.forEach((link) => link.classList.remove("active"));
+      navLinks.forEach(function (link) {
+        link.classList.remove("active");
+      });
     });
   });
 
   /* =========================================================
      SMOOTH SCROLL
-  ========================================================= */
+     ========================================================= */
 
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+  document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
       const targetId = this.getAttribute("href");
 
@@ -719,10 +865,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   /* =========================================================
-     CLOSE MOBILE MENU AFTER DROPDOWN
-  ========================================================= */
+     MOBILE NAVBAR CLOSE
+     ========================================================= */
 
-  dropdownItems.forEach((item) => {
+  dropdownItems.forEach(function (item) {
     item.addEventListener("click", function () {
       const mainMenu = get("mainMenu");
 
@@ -735,6 +881,10 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  /* =========================================================
+     FINAL CONSOLE CHECK
+     ========================================================= */
 
   console.log("QMSISO script.js loaded successfully.");
 });

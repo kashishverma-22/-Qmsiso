@@ -1,36 +1,41 @@
 /* =========================================================
-   QMSISO - EMAILJS FORM INTEGRATION
-========================================================= */
+   QMSISO - EMAILJS MAILER
+   ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
   "use strict";
 
   /* =========================================================
-     EMAILJS CONFIG
-  ========================================================= */
+     EMAILJS CONFIGURATION
+     ========================================================= */
 
   const PUBLIC_KEY = "rbcYF-ftTP6MUowTJ";
   const SERVICE_ID = "service_gle0qcr";
   const TEMPLATE_ID = "template_r5a5wac";
 
   /* =========================================================
-     EMAILJS INIT
-  ========================================================= */
+     CHECK EMAILJS LIBRARY
+     ========================================================= */
 
   if (typeof emailjs === "undefined") {
     console.error("QMSISO EmailJS Error: EmailJS library not loaded.");
+
     return;
   }
+
+  /* =========================================================
+     INITIALIZE EMAILJS
+     ========================================================= */
 
   emailjs.init({
     publicKey: PUBLIC_KEY,
   });
 
-  console.log("QMSISO EmailJS initialized.");
+  console.log("QMSISO EmailJS initialized successfully.");
 
   /* =========================================================
-     HELPERS
-  ========================================================= */
+     GET SUBMIT BUTTON
+     ========================================================= */
 
   function getSubmitButton(form) {
     if (!form) return null;
@@ -39,9 +44,14 @@ document.addEventListener("DOMContentLoaded", function () {
       form.querySelector(".submit-btn") ||
       form.querySelector(".form-submit-btn") ||
       form.querySelector(".enquiry-submit-btn") ||
-      form.querySelector(".contact-submit-btn")
+      form.querySelector(".contact-submit-btn") ||
+      form.querySelector('button[type="submit"]')
     );
   }
+
+  /* =========================================================
+     RESTORE BUTTON
+     ========================================================= */
 
   function restoreButton(form) {
     const button = getSubmitButton(form);
@@ -50,38 +60,76 @@ document.addEventListener("DOMContentLoaded", function () {
 
     button.disabled = false;
 
-    if (form.id === "quoteForm") {
-      button.innerHTML =
-        'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
-    } else if (form.id === "heroQuoteForm") {
-      button.innerHTML =
-        'Request Consultation <i class="fa-solid fa-arrow-right"></i>';
-    } else if (form.id === "quickEnquiryForm") {
-      button.innerHTML =
-        'Submit Enquiry <i class="fa-solid fa-arrow-right"></i>';
-    } else if (form.id === "contactForm") {
-      button.innerHTML =
-        'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
+    switch (form.id) {
+      case "quoteForm":
+        button.innerHTML =
+          'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      case "heroQuoteForm":
+        button.innerHTML =
+          'Request Consultation <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      case "quickEnquiryForm":
+        button.innerHTML =
+          'Submit Enquiry <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      case "contactForm":
+        button.innerHTML =
+          'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
+        break;
+
+      default:
+        button.innerHTML =
+          'Submit Inquiry <i class="fa-solid fa-arrow-right"></i>';
     }
   }
 
-  function resetFormAfterSuccess(form) {
+  /* =========================================================
+     RESET FORM
+     ========================================================= */
+
+  function resetForm(form) {
     if (!form) return;
 
     form.reset();
 
-    form.querySelectorAll(".has-error, .has-success").forEach((field) => {
+    form.querySelectorAll(".has-error, .has-success").forEach(function (field) {
       field.classList.remove("has-error", "has-success");
     });
 
-    form.querySelectorAll(".form-error, .contact-error").forEach((error) => {
-      error.textContent = "";
-    });
+    form
+      .querySelectorAll(
+        ".form-error, .contact-error, .enquiry-error, .error-message",
+      )
+      .forEach(function (error) {
+        error.textContent = "";
+      });
+  }
+
+  /* =========================================================
+     CLOSE QUOTE POPUP
+     ========================================================= */
+
+  function closeQuotePopup() {
+    const quoteModal = document.getElementById("quoteModal");
+
+    if (!quoteModal) return;
+
+    quoteModal.classList.remove("show");
+
+    quoteModal.style.display = "none";
+
+    quoteModal.setAttribute("aria-hidden", "true");
+
+    document.body.style.overflow = "";
   }
 
   /* =========================================================
      SUCCESS MESSAGE
-  ========================================================= */
+     ========================================================= */
 
   function showSuccess(formName) {
     alert(
@@ -94,53 +142,59 @@ document.addEventListener("DOMContentLoaded", function () {
 
   /* =========================================================
      ERROR MESSAGE
-  ========================================================= */
+     ========================================================= */
 
-  function showError() {
+  function showError(error) {
+    console.error("QMSISO EmailJS sending failed:", error);
+
     alert(
       "Sorry!\n\n" +
-        "Your inquiry could not be sent right now.\n\n" +
-        "Please try again or contact QMSISO directly.",
+        "Your enquiry could not be sent right now.\n\n" +
+        "Please try again.",
     );
   }
 
   /* =========================================================
-     SEND EMAIL
-  ========================================================= */
+     SEND EMAIL THROUGH EMAILJS
+     ========================================================= */
 
   async function sendQMSISOEmail(data) {
     try {
       /*
-        These names MUST match your EmailJS template variables.
+        IMPORTANT:
+        These variable names MUST match
+        your EmailJS template:
 
         {{form_name}}
-        {{user_name}}
-        {{user_email}}
-        {{user_phone}}
+        {{name}}
+        {{business}}
+        {{phone}}
+        {{email}}
+        {{certificate}}
         {{message}}
       */
 
       const templateParams = {
-        form_name: data.formName || "QMSISO Website Form",
+        form_name: data.formName || "QMSISO Website Enquiry",
 
-        user_name: data.name || "Not Provided",
+        name: data.name || "Not Provided",
 
-        user_email: data.email || "Not Provided",
+        business: data.business || "Not Provided",
 
-        user_phone: data.phone || "Not Provided",
+        phone: data.phone || "Not Provided",
 
-        message:
-          "Business Name: " +
-          (data.business || "Not Provided") +
-          "\n" +
-          "Required Certification: " +
-          (data.certificate || "Not Selected") +
-          "\n" +
-          "Message: " +
-          (data.message || "No additional message"),
+        email: data.email || "Not Provided",
+
+        certificate: data.certificate || "Not Selected",
+
+        message: data.message || "No additional message",
       };
 
-      console.log("QMSISO EmailJS Sending:", templateParams);
+      console.log("QMSISO EmailJS Template Parameters:", templateParams);
+
+      /* =====================================================
+         SEND EMAIL
+         ===================================================== */
 
       const response = await emailjs.send(
         SERVICE_ID,
@@ -148,25 +202,32 @@ document.addEventListener("DOMContentLoaded", function () {
         templateParams,
       );
 
-      console.log("QMSISO EmailJS Success:", response);
+      console.log("QMSISO EmailJS SUCCESS:", response);
 
-      return true;
+      return {
+        success: true,
+        response: response,
+      };
     } catch (error) {
-      console.error("QMSISO EmailJS Error:", error);
+      console.error("QMSISO EmailJS ERROR:", error);
 
-      return false;
+      return {
+        success: false,
+        error: error,
+      };
     }
   }
 
   /* =========================================================
-     FORM SEND EVENT
-  ========================================================= */
+     RECEIVE FORM FROM script.js
+     ========================================================= */
 
   document.addEventListener("qmsiso:sendForm", async function (event) {
     const data = event.detail;
 
     if (!data || !data.form) {
       console.error("QMSISO: Form data missing.");
+
       return;
     }
 
@@ -174,67 +235,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const submitButton = getSubmitButton(form);
 
-    /*
-        Disable button while EmailJS is sending
-      */
+    /* =====================================================
+         SEND EMAIL
+         ===================================================== */
 
-    if (submitButton) {
-      submitButton.disabled = true;
-
-      submitButton.innerHTML =
-        '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
-    }
-
-    /*
-        SEND EMAIL
-      */
-
-    const success = await sendQMSISOEmail(data);
+    const result = await sendQMSISOEmail(data);
 
     /* =====================================================
-         SUCCESS
-      ===================================================== */
+         EMAIL SENT SUCCESSFULLY
+         ===================================================== */
 
-    if (success) {
-      resetFormAfterSuccess(form);
+    if (result.success) {
+      console.log("QMSISO: Email successfully sent.");
+
+      resetForm(form);
 
       restoreButton(form);
 
-      showSuccess(data.formName);
+      showSuccess(data.formName || "Your enquiry");
 
-      /*
-          Quote popup close
-        */
-
+      /* Close quote popup */
       if (form.id === "quoteForm") {
-        const quoteModal = document.getElementById("quoteModal");
-
-        if (quoteModal) {
-          quoteModal.classList.remove("show");
-
-          quoteModal.style.display = "none";
-
-          quoteModal.setAttribute("aria-hidden", "true");
-
-          document.body.style.overflow = "";
-        }
+        closeQuotePopup();
       }
 
       return;
     }
 
     /* =====================================================
-         ERROR
-      ===================================================== */
+         EMAIL FAILED
+         ===================================================== */
 
     restoreButton(form);
 
-    showError();
+    showError(result.error);
   });
 
   /* =========================================================
-     CONSOLE CHECK
-  ========================================================= */
+     FINAL CONSOLE CHECK
+     ========================================================= */
 
-  console.log("QMSISO EmailJS mailer loaded successfully.");
+  console.log("QMSISO jsmailer.js loaded successfully.");
 });
