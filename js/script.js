@@ -3,6 +3,32 @@
    ========================================================= */
 
 document.addEventListener("DOMContentLoaded", function () {
+  const serviceKeys = {
+    "ISO 9001:2015": "iso-9001", "ISO 14001:2015": "iso-14001",
+    "ISO 45001:2018": "iso-45001", "ISO 27001:2022": "iso-27001",
+    "ISO 22000:2018": "iso-22000", "ISO 13485:2016": "iso-13485",
+    "ISO 50001:2018": "iso-50001", "ISO 20000-1:2018": "iso-20000-1",
+    "GMP Certification": "gmp", "CE Marking": "ce-marking",
+    "HACCP Certification": "haccp", "Kosher Certification": "kosher",
+    "RoHS Compliance": "rohs"
+  };
+  document.querySelectorAll(".iso-quote-btn, .compliance-quote-btn").forEach((button) => {
+    const key = serviceKeys[button.dataset.certificate];
+    if (!key) return;
+    const link = document.createElement("a");
+    link.className = "service-detail-link";
+    link.href = `service_details.html?service=${key}`;
+    link.textContent = "View details";
+    button.parentElement.insertBefore(link, button);
+  });
+  const featuredServiceKeys = ["iso-9001", "iso-14001", "iso-45001", "iso-27001"];
+  document.querySelectorAll("#services .service-card").forEach((card, index) => {
+    const link = document.createElement("a");
+    link.className = "service-detail-link";
+    link.href = `service_details.html?service=${featuredServiceKeys[index]}`;
+    link.textContent = "View details";
+    card.appendChild(link);
+  });
   "use strict";
 
   /* =========================================================
