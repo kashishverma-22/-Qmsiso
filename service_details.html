@@ -1,664 +1,591 @@
 ﻿<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Service Details | QMS ISO Certification</title>
-    <meta
-      name="description"
-      content="QMS ISO Certification ISO certification and compliance service details."
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
-    <link rel="stylesheet" href="css/responsive2.css" />
-    <link rel="stylesheet" href="css/service-pages.css" />
-    <style>
-      .service-detail-back {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        color: #c8d5e5;
-        text-decoration: none;
-        font-size: 13px;
-        font-weight: 600;
-        margin-bottom: 22px;
-      }
-      .service-detail-back:hover {
-        color: #f2a51a;
-      }
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Service Details | QMS ISO Certification</title>
+  <meta name="description" content="QMS ISO Certification ISO certification and compliance service details." />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <link rel="stylesheet" href="css/responsive2.css" />
+  <link rel="stylesheet" href="css/service-pages.css" />
+  <style>
+    .service-detail-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #c8d5e5;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 22px;
+    }
+
+    .service-detail-back:hover {
+      color: #f2a51a;
+    }
+
+    .service-detail-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin: 25px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .service-detail-list li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      color: #4f6177;
+      font-size: 14px;
+      line-height: 1.6;
+      background: #fff;
+      padding: 14px;
+      border: 1px solid #e7ecf1;
+      border-radius: 8px;
+    }
+
+    .service-detail-list i {
+      color: #f2a51a;
+      margin-top: 4px;
+    }
+
+    .service-detail-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .service-detail-meta span {
+      padding: 7px 11px;
+      border-radius: 20px;
+      background: #eef3f8;
+      color: #3d526c;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    @media (max-width: 767px) {
       .service-detail-list {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-        margin: 25px 0 0;
-        padding: 0;
-        list-style: none;
+        grid-template-columns: 1fr;
       }
-      .service-detail-list li {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-        color: #4f6177;
-        font-size: 14px;
-        line-height: 1.6;
-        background: #fff;
-        padding: 14px;
-        border: 1px solid #e7ecf1;
-        border-radius: 8px;
-      }
-      .service-detail-list i {
-        color: #f2a51a;
-        margin-top: 4px;
-      }
-      .service-detail-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 9px;
-        margin-top: 22px;
-      }
-      .service-detail-meta span {
-        padding: 7px 11px;
-        border-radius: 20px;
-        background: #eef3f8;
-        color: #3d526c;
-        font-size: 11px;
-        font-weight: 700;
-      }
-      @media (max-width: 767px) {
-        .service-detail-list {
-          grid-template-columns: 1fr;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <!-- ================= TOP BAR ================= -->
+    }
+  </style>
+</head>
 
-    <div class="top-bar">
-      <div class="container-fluid px-lg-5">
-        <div class="topbar-content">
-          <!-- Left -->
+<body>
+  <!-- ================= TOP BAR ================= -->
 
-          <div class="top-left">
-            <span>
-              <i class="fa-solid fa-location-dot"></i>
-              QMS ISO Certification Services, New Delhi
-            </span>
+  <div class="top-bar">
+    <div class="container-fluid px-lg-5">
+      <div class="topbar-content">
+        <!-- Left -->
 
-            <span class="top-divider"></span>
+        <div class="top-left">
+          <span>
+            <i class="fa-solid fa-location-dot"></i>
+            QMS ISO Certification Services, New Delhi
+          </span>
 
-            <span>
-              <i class="fa-regular fa-clock"></i>
-              Mon-Sat · 9 AM – 7 PM
-            </span>
-          </div>
+          <span class="top-divider"></span>
 
-          <!-- Right -->
+          <span>
+            <i class="fa-regular fa-clock"></i>
+            Mon-Sat · 9 AM – 7 PM
+          </span>
+        </div>
 
-          <div class="top-right">
-            <a href="mailto:contact@qmsiso.org"> contact@qmsiso.org </a>
+        <!-- Right -->
 
-            <a href="tel:+917814445008"> +91 7814445008 </a>
-          </div>
+        <div class="top-right">
+          <a href="mailto:contact@qmsiso.org"> contact@qmsiso.org </a>
+
+          <a href="tel:+917814445008"> +91 7814445008 </a>
         </div>
       </div>
     </div>
+  </div>
 
-    <!-- ================= NAVBAR ================= -->
+  <!-- ================= NAVBAR ================= -->
 
-    <nav class="main-navbar navbar-expand-lg">
-      <div class="container-fluid px-lg-5">
-        <div class="navbar-inner">
-          <!-- LOGO -->
+  <nav class="main-navbar navbar-expand-lg">
+    <div class="container-fluid px-lg-5">
+      <div class="navbar-inner">
+        <!-- LOGO -->
 
-          <a href="index.html#home" class="navbar-logo">
-            <img src="images/logo.png" alt="QMS ISO Certification Logo" />
-          </a>
+        <a href="index.html#home" class="navbar-logo">
+          <img src="images/logo.png" alt="QMS ISO Certification Logo" />
+        </a>
 
-          <!-- MOBILE BUTTON -->
+        <!-- MOBILE BUTTON -->
 
-          <button
-            class="mobile-toggle"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#mainMenu"
-          >
-            <i class="fa-solid fa-bars"></i>
-          </button>
-
-          <!-- MENU -->
-
-          <div class="collapse navbar-collapse" id="mainMenu">
-            <ul class="navbar-nav mx-auto">
-              <li class="nav-item">
-                <a class="nav-link active" href="index.html#home"> Home </a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#about"> About Us </a>
-              </li>
-
-              <!-- SERVICES -->
-
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="index.html#services"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                >
-                  Services
-                </a>
-
-                <ul class="dropdown-menu">
-                  <!-- ISO 9001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-9001"
-                    >
-                      ISO 9001 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 14001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-14001"
-                    >
-                      ISO 14001 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 45001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-45001"
-                    >
-                      ISO 45001 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 27001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-27001"
-                    >
-                      ISO 27001 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 22000 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-22000"
-                    >
-                      ISO 22000 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 13485 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-13485"
-                    >
-                      ISO 13485 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 50001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-50001"
-                    >
-                      ISO 50001 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 20000-1 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-20000-1"
-                    >
-                      ISO 20000-1 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 37001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-37001"
-                    >
-                      ISO 37001 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 22301 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-22301"
-                    >
-                      ISO 22301 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 39001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-39001"
-                    >
-                      ISO 39001 Certification
-                    </a>
-                  </li>
-
-                  <!-- ISO 55001 -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=iso-55001"
-                    >
-                      ISO 55001 Certification
-                    </a>
-                  </li>
-
-                  <!-- GMP -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=gmp"
-                    >
-                      GMP
-                    </a>
-                  </li>
-
-                  <!-- CE MARKING -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=ce-marking"
-                    >
-                      CE Marking
-                    </a>
-                  </li>
-
-                  <!-- HACCP -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=haccp"
-                    >
-                      HACCP
-                    </a>
-                  </li>
-
-                  <!-- KOSHER -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=kosher"
-                    >
-                      Kosher
-                    </a>
-                  </li>
-
-                  <!-- ROHS -->
-
-                  <li>
-                    <a
-                      class="dropdown-item"
-                      href="service_details.html?service=rohs"
-                    >
-                      RoHS
-                    </a>
-                  </li>
-                </ul>
-              </li>
-
-              <!-- CONTACT -->
-
-              <li class="nav-item">
-                <a class="nav-link" href="index.html#contact"> Contact Us </a>
-              </li>
-            </ul>
-
-            <!-- QUOTE BUTTON -->
-
-            <button type="button" class="quote-btn" id="openQuote">
-              Get a Free Quote
-            </button>
-          </div>
-        </div>
-      </div>
-    </nav>
-
-    <!-- ================= QUOTE POPUP ================= -->
-
-    <div class="quote-overlay" id="quoteModal">
-      <div class="quote-popup">
-        <!-- CLOSE -->
-        <button type="button" class="popup-close" id="closeQuote">
-          <i class="fa-solid fa-xmark"></i>
+        <button class="mobile-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+          <i class="fa-solid fa-bars"></i>
         </button>
 
-        <!-- HEADING -->
-        <div class="popup-heading">
-          <h3>Get a Free Quote</h3>
+        <!-- MENU -->
 
-          <p>We'll help you choose the right ISO certification.</p>
-        </div>
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html#home"> Home </a>
+            </li>
 
-        <!-- FORM -->
-        <form id="quoteForm">
-          <!-- Name -->
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Full Name *" required />
-          </div>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about"> About Us </a>
+            </li>
 
-          <!-- Business -->
-          <div class="form-group">
-            <input
-              type="text"
-              name="business"
-              placeholder="Business Name *"
-              required
-            />
-          </div>
+            <!-- SERVICES -->
 
-          <!-- Mobile -->
-          <div class="form-group">
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Mobile Number *"
-              required
-            />
-          </div>
-
-          <!-- Email -->
-          <div class="form-group">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address *"
-              required
-            />
-          </div>
-
-          <!-- Certificate -->
-          <div class="form-group">
-            <select name="certificate" required>
-              <option value="">Required ISO Certificate *</option>
-
-              <option value="ISO 9001">ISO 9001</option>
-
-              <option value="ISO 14001">ISO 14001</option>
-
-              <option value="ISO 45001">ISO 45001</option>
-
-              <option value="ISO 27001">ISO 27001</option>
-
-              <option value="ISO 22000">ISO 22000</option>
-
-              <option value="ISO 13485">ISO 13485</option>
-
-              <option value="Other">Other ISO Certification</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <textarea name="message" rows="3" placeholder="Tell us about your certification requirement"></textarea>
-          </div>
-
-          <!-- Submit -->
-          <button type="submit" class="submit-btn">
-            Submit Inquiry
-
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </form>
-      </div>
-    </div>
-
-    <main id="serviceDetail"></main>
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="qmsiso-footer">
-      <div class="container-fluid px-lg-5">
-        <div class="row g-4 footer-main">
-          <!-- BRAND + MAP -->
-          <div class="col-lg-5 col-md-12">
-            <div class="footer-brand">
-              <a href="index.html#home" class="footer-logo">
-                <img src="images/logo.png" alt="QMS ISO Certification" />
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="index.html#services" role="button" data-bs-toggle="dropdown">
+                Services
               </a>
 
-              <p>
-                QMS ISO Certification is a professional ISO certification and compliance
-                support partner helping businesses achieve internationally
-                recognized standards with simple, reliable, and hassle-free
-                documentation support.
-              </p>
-            </div>
+              <ul class="dropdown-menu">
+                <!-- ISO 9001 -->
 
-            <!-- MAP -->
-            <div class="footer-map">
-              <iframe
-                src="https://www.google.com/maps?q=New%20Delhi%2C%20India&output=embed"
-                loading="lazy"
-                allowfullscreen
-                referrerpolicy="no-referrer-when-downgrade"
-              >
-              </iframe>
-            </div>
-          </div>
-
-          <!-- CERTIFICATIONS -->
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="footer-column">
-              <h4>CERTIFICATIONS</h4>
-
-              <ul>
                 <li>
-                  <a href="index.html#certification-standards"> ISO 9001:2015 </a>
+                  <a class="dropdown-item" href="service_details.html?service=iso-9001">
+                    ISO 9001 Certification
+                  </a>
                 </li>
 
-                <li>
-                  <a href="index.html#certification-standards"> ISO 14001:2015 </a>
-                </li>
+                <!-- ISO 14001 -->
 
                 <li>
-                  <a href="index.html#certification-standards"> ISO 45001:2018 </a>
+                  <a class="dropdown-item" href="service_details.html?service=iso-14001">
+                    ISO 14001 Certification
+                  </a>
                 </li>
 
-                <li>
-                  <a href="index.html#certification-standards"> ISO 27001:2022 </a>
-                </li>
+                <!-- ISO 45001 -->
 
                 <li>
-                  <a href="index.html#certification-standards"> ISO 22000:2018 </a>
+                  <a class="dropdown-item" href="service_details.html?service=iso-45001">
+                    ISO 45001 Certification
+                  </a>
                 </li>
 
-                <li>
-                  <a href="index.html#certification-standards"> ISO 13485:2016 </a>
-                </li>
+                <!-- ISO 27001 -->
 
                 <li>
-                  <a href="index.html#certification-standards"> ISO 50001:2018 </a>
+                  <a class="dropdown-item" href="service_details.html?service=iso-27001">
+                    ISO 27001 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 22000 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-22000">
+                    ISO 22000 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 13485 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-13485">
+                    ISO 13485 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 50001 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-50001">
+                    ISO 50001 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 20000-1 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-20000-1">
+                    ISO 20000-1 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 37001 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-37001">
+                    ISO 37001 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 22301 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-22301">
+                    ISO 22301 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 39001 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-39001">
+                    ISO 39001 Certification
+                  </a>
+                </li>
+
+                <!-- ISO 55001 -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=iso-55001">
+                    ISO 55001 Certification
+                  </a>
+                </li>
+
+                <!-- GMP -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=gmp">
+                    GMP
+                  </a>
+                </li>
+
+                <!-- CE MARKING -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=ce-marking">
+                    CE Marking
+                  </a>
+                </li>
+
+                <!-- HACCP -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=haccp">
+                    HACCP
+                  </a>
+                </li>
+
+                <!-- KOSHER -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=kosher">
+                    Kosher
+                  </a>
+                </li>
+
+                <!-- ROHS -->
+
+                <li>
+                  <a class="dropdown-item" href="service_details.html?service=rohs">
+                    RoHS
+                  </a>
                 </li>
               </ul>
-            </div>
-          </div>
+            </li>
 
-          <!-- COMPLIANCES -->
-          <div class="col-lg-2 col-md-4 col-sm-6">
-            <div class="footer-column">
-              <h4>COMPLIANCES</h4>
+            <!-- CONTACT -->
 
-              <ul>
-                <li>
-                  <a href="index.html#compliance"> GMP Certificate </a>
-                </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact"> Contact Us </a>
+            </li>
+          </ul>
 
-                <li>
-                  <a href="index.html#compliance"> CE Marking </a>
-                </li>
+          <!-- QUOTE BUTTON -->
 
-                <li>
-                  <a href="index.html#compliance"> HACCP Certificate </a>
-                </li>
+          <button type="button" class="quote-btn" id="openQuote">
+            Get a Free Quote
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
 
-                <li>
-                  <a href="index.html#compliance"> Kosher Certification </a>
-                </li>
+  <!-- ================= QUOTE POPUP ================= -->
 
-                <li>
-                  <a href="index.html#compliance"> RoHS Compliance </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+  <div class="quote-overlay" id="quoteModal">
+    <div class="quote-popup">
+      <!-- CLOSE -->
+      <button type="button" class="popup-close" id="closeQuote">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
 
-          <!-- COMPANY -->
-          <div class="col-lg-3 col-md-4 col-sm-6">
-            <div class="footer-column">
-              <h4>COMPANY</h4>
+      <!-- HEADING -->
+      <div class="popup-heading">
+        <h3>Get a Free Quote</h3>
 
-              <ul>
-                <li>
-                  <a href="index.html#home"> Home </a>
-                </li>
+        <p>We'll help you choose the right ISO certification.</p>
+      </div>
 
-                <li>
-                  <a href="index.html#about"> About Us </a>
-                </li>
-
-                <li>
-                  <a href="index.html#certification-standards"> Certifications </a>
-                </li>
-
-                <li>
-                  <a href="index.html#contact"> Contact Us </a>
-                </li>
-
-                <li>
-                  <a href="#"> Privacy Policy </a>
-                </li>
-
-                <li>
-                  <a href="#"> Terms & Conditions </a>
-                </li>
-
-                <li>
-                  <a href="#"> Refund Policy </a>
-                </li>
-              </ul>
-
-              <!-- CONTACT -->
-              <div class="footer-contact">
-                <a href="tel:+917814445008">
-                  <i class="fa-solid fa-phone"></i>
-
-                  +91 7814445008
-                </a>
-
-                <a href="mailto:contact@qmsiso.org">
-                  <i class="fa-solid fa-envelope"></i>
-
-                  contact@qmsiso.org
-                </a>
-              </div>
-            </div>
-          </div>
+      <!-- FORM -->
+      <form id="quoteForm">
+        <!-- Name -->
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Full Name *" required />
         </div>
 
-        <!-- ================= FOOTER BOTTOM ================= -->
+        <!-- Business -->
+        <div class="form-group">
+          <input type="text" name="business" placeholder="Business Name *" required />
+        </div>
 
-        <div class="footer-bottom">
-          <div class="footer-bottom-left">
-            <p>Â© 2026 QMS ISO Certification. All rights reserved.</p>
+        <!-- Mobile -->
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Mobile Number *" required />
+        </div>
 
-            <p class="footer-disclaimer">
-              Disclaimer: QMS ISO Certification provides professional third-party certification
-              consultation and documentation support. Certification is issued by
-              recognized certification bodies according to applicable
-              requirements.
+        <!-- Email -->
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address *" required />
+        </div>
+
+        <!-- Certificate -->
+        <div class="form-group">
+          <select name="certificate" required>
+            <option value="">Required ISO Certificate *</option>
+
+            <option value="ISO 9001">ISO 9001</option>
+
+            <option value="ISO 14001">ISO 14001</option>
+
+            <option value="ISO 45001">ISO 45001</option>
+
+            <option value="ISO 27001">ISO 27001</option>
+
+            <option value="ISO 22000">ISO 22000</option>
+
+            <option value="ISO 13485">ISO 13485</option>
+
+            <option value="Other">Other ISO Certification</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <textarea name="message" rows="3" placeholder="Tell us about your certification requirement"></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="submit-btn">
+          Submit Inquiry
+
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <main id="serviceDetail"></main>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer class="qmsiso-footer">
+    <div class="container-fluid px-lg-5">
+      <div class="row g-4 footer-main">
+        <!-- BRAND + MAP -->
+        <div class="col-lg-5 col-md-12">
+          <div class="footer-brand">
+            <a href="index.html#home" class="footer-logo">
+              <img src="images/logo.png" alt="QMS ISO Certification" />
+            </a>
+
+            <p>
+              QMS ISO Certification is a professional ISO certification and
+              compliance support partner helping businesses achieve
+              internationally recognized standards with simple, reliable, and
+              hassle-free documentation support.
             </p>
           </div>
 
-          <div class="footer-bottom-links">
-            <a href="#"> Privacy Policy </a>
+          <!-- MAP -->
+          <div class="footer-map">
+            <iframe src="https://www.google.com/maps?q=New%20Delhi%2C%20India&output=embed" loading="lazy"
+              allowfullscreen referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
 
-            <a href="#"> Terms </a>
+        <!-- CERTIFICATIONS -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footer-column">
+            <h4>CERTIFICATIONS</h4>
 
-            <a href="#"> Refund Policy </a>
+            <ul>
+              <li>
+                <a href="index.html#certification-standards">
+                  ISO 9001:2015
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#certification-standards">
+                  ISO 14001:2015
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#certification-standards">
+                  ISO 45001:2018
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#certification-standards">
+                  ISO 27001:2022
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#certification-standards">
+                  ISO 22000:2018
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#certification-standards">
+                  ISO 13485:2016
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#certification-standards">
+                  ISO 50001:2018
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COMPLIANCES -->
+        <div class="col-lg-2 col-md-4 col-sm-6">
+          <div class="footer-column">
+            <h4>COMPLIANCES</h4>
+
+            <ul>
+              <li>
+                <a href="index.html#compliance"> GMP Certificate </a>
+              </li>
+
+              <li>
+                <a href="index.html#compliance"> CE Marking </a>
+              </li>
+
+              <li>
+                <a href="index.html#compliance"> HACCP Certificate </a>
+              </li>
+
+              <li>
+                <a href="index.html#compliance"> Kosher Certification </a>
+              </li>
+
+              <li>
+                <a href="index.html#compliance"> RoHS Compliance </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- COMPANY -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="footer-column">
+            <h4>COMPANY</h4>
+
+            <ul>
+              <li>
+                <a href="index.html#home"> Home </a>
+              </li>
+
+              <li>
+                <a href="index.html#about"> About Us </a>
+              </li>
+
+              <li>
+                <a href="index.html#certification-standards">
+                  Certifications
+                </a>
+              </li>
+
+              <li>
+                <a href="index.html#contact"> Contact Us </a>
+              </li>
+
+              <li>
+                <a href="#"> Privacy Policy </a>
+              </li>
+
+              <li>
+                <a href="#"> Terms & Conditions </a>
+              </li>
+
+              <li>
+                <a href="#"> Refund Policy </a>
+              </li>
+            </ul>
+
+            <!-- CONTACT -->
+            <div class="footer-contact">
+              <a href="tel:+917814445008">
+                <i class="fa-solid fa-phone"></i>
+
+                +91 7814445008
+              </a>
+
+              <a href="mailto:contact@qmsiso.org">
+                <i class="fa-solid fa-envelope"></i>
+
+                contact@qmsiso.org
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- ================= WHATSAPP ================= -->
+      <!-- ================= FOOTER BOTTOM ================= -->
 
-      <a
-        href="https://wa.me/917814445008"
-        class="footer-whatsapp"
-        target="_blank"
-        aria-label="Chat on WhatsApp"
-      >
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>Â© 2026 QMS ISO Certification. All rights reserved.</p>
 
-      <!-- ================= CHAT BUTTON ================= -->
+          <p class="footer-disclaimer">
+            Disclaimer: QMS ISO Certification provides professional
+            third-party certification consultation and documentation support.
+            Certification is issued by recognized certification bodies
+            according to applicable requirements.
+          </p>
+        </div>
 
-      <button type="button" class="footer-chat" aria-label="Open Chat">
-        <i class="fa-solid fa-comment"></i>
-      </button>
-    </footer>
+        <div class="footer-bottom-links">
+          <a href="#"> Privacy Policy </a>
 
-    <!-- ================= SCRIPTS ================= -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-   
-    <script src="js/script.js"></script>
-    <script src="js/jsmailer.js"></script>
-    <script src="js/service-details.js"></script>
-  </body>
+          <a href="#"> Terms </a>
+
+          <a href="#"> Refund Policy </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= WHATSAPP ================= -->
+
+    <a href="https://wa.me/917814445008" class="footer-whatsapp" target="_blank" aria-label="Chat on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ================= CHAT BUTTON ================= -->
+
+    <button type="button" class="footer-chat" aria-label="Open Chat">
+      <i class="fa-solid fa-comment"></i>
+    </button>
+  </footer>
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/script.js"></script>
+  <script src="js/jsmailer.js"></script>
+  <script src="js/service-details.js"></script>
+</body>
+
 </html>
-
-

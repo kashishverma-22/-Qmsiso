@@ -1,7 +1,3 @@
-/* =========================================================
-   QMSISO - SERVICE DETAILS
-   service-details.js
-========================================================= */
 
 /* =========================================================
    SERVICE DATA
@@ -575,8 +571,8 @@ if (serviceDetail) {
         <div class="service-focus-grid">
 
           ${selectedService.focusAreas
-            .map(
-              (area) => `
+      .map(
+        (area) => `
 
                 <div class="service-focus-card">
 
@@ -602,8 +598,8 @@ if (serviceDetail) {
                 </div>
 
               `,
-            )
-            .join("")}
+      )
+      .join("")}
 
         </div>
 
