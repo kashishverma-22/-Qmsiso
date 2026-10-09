@@ -669,6 +669,57 @@ select {
   box-shadow: 0 0 0 2px rgba(242, 165, 26, 0.08);
 }
 
+
+/* FIX: HERO FORM BOTTOM SPACE */
+.qmsiso-hero {
+  padding-bottom: 0;
+}
+
+.qmsiso-hero .row.align-items-center {
+  padding-bottom: 10px;
+}
+
+.qmsiso-hero .hero-form-box {
+  position: relative;
+  height: auto;
+  min-height: fit-content;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.qmsiso-hero #heroQuoteForm {
+  margin-bottom: 0;
+}
+
+.qmsiso-hero .form-submit-btn {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.qmsiso-hero .hero-stats {
+  position: relative;
+  margin-top: 0;
+  clear: both;
+}
+
+/* TABLET AND MOBILE */
+@media (max-width: 991px) {
+  .qmsiso-hero .row.align-items-center {
+    padding-bottom: 25px;
+  }
+
+  .qmsiso-hero .hero-form-box {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+  }
+}
+
+
+
 /* =====================================================
    VALIDATION ERROR
 ===================================================== */
