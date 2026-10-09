@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
    QMSISO - PHP MAILER (send-mail.php)
    ========================================================= */
 
@@ -146,13 +146,13 @@ document.addEventListener("DOMContentLoaded", function () {
       "<p>" +
         safe +
         " has been submitted successfully.</p>" +
-        "<p>Our QMSISO team will contact you shortly.</p>" +
+        "<p>Our QMS ISO Certification team will contact you shortly.</p>" +
         '<p class="qm-popup-sub">We usually respond within one business day.</p>',
     );
   }
 
   function showError(error) {
-    console.error("QMSISO mail failed:", error);
+    console.error("QMS ISO Certification mail failed:", error);
     showPopup(
       "error",
       "Something Went Wrong",
@@ -164,7 +164,7 @@ document.addEventListener("DOMContentLoaded", function () {
   async function sendQMSISOEmail(data) {
     try {
       const body = new URLSearchParams({
-        form_name: data.formName || "QMSISO Website Enquiry",
+        form_name: data.formName || "QMS ISO Contact",
         name: data.name || "",
         business: data.business || "",
         phone: data.phone || "",
@@ -195,7 +195,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const data = event.detail;
 
     if (!data || !data.form) {
-      console.error("QMSISO: Form data missing.");
+      console.error("QMS ISO Certification: Form data missing.");
       return;
     }
 

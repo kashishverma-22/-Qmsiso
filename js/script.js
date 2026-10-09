@@ -65,6 +65,19 @@ document.addEventListener("DOMContentLoaded", function () {
     return null;
   }
 
+  function validateEmail(input, error) {
+    if (!input) return false;
+    const value = input.value.trim();
+    if (!value || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+      if (error) error.textContent = "Please enter a valid email address.";
+      input.classList.add("has-error");
+      return false;
+    }
+    if (error) error.textContent = "";
+    input.classList.remove("has-error");
+    return true;
+  }
+
   function getFieldWrapper(input) {
     if (!input) return null;
 
@@ -235,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function openQuotePopup(certificate = "") {
     if (!quoteModal) {
-      console.error("QMSISO: #quoteModal not found.");
+      console.error("QMS ISO Certification: #quoteModal not found.");
       return;
     }
 
@@ -425,7 +438,7 @@ document.addEventListener("DOMContentLoaded", function () {
     quoteForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      const data = collectFormData(quoteForm, "Quote Request");
+      const data = collectFormData(quoteForm, "QMS ISO Contact");
 
       if (!data) return;
 
@@ -447,12 +460,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const fullName = get("fullName");
     const businessName = get("businessName");
     const mobileNumber = get("mobileNumber");
+    const heroEmail = get("heroEmail");
     const certificate = get("certificate");
 
     const fullNameError = get("fullNameError");
     const businessNameError = get("businessNameError");
     const mobileNumberError = get("mobileNumberError");
     const certificateError = get("certificateError");
+    const heroEmailError = get("heroEmailError");
 
     function validateHeroName() {
       if (!fullName) return true;
@@ -582,12 +597,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const validBusiness = validateHeroBusiness();
       const validMobile = validateHeroMobile();
       const validCertificate = validateHeroCertificate();
+      const validEmail = validateEmail(heroEmail, heroEmailError);
 
-      if (!validName || !validBusiness || !validMobile || !validCertificate) {
+      if (!validName || !validBusiness || !validMobile || !validCertificate || !validEmail) {
         return;
       }
 
-      const data = collectFormData(heroQuoteForm, "Hero Consultation Request");
+      const data = collectFormData(heroQuoteForm, "QMS ISO Contact");
 
       if (!data) return;
 
@@ -609,6 +625,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quickFullName = get("quickFullName");
     const quickBusinessName = get("quickBusinessName");
     const quickMobileNumber = get("quickMobileNumber");
+    const quickEmail = get("quickEmail");
     const quickCertificate = get("quickCertificate");
 
     const quickFullNameError = get("quickFullNameError");
@@ -618,6 +635,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const quickMobileNumberError = get("quickMobileNumberError");
 
     const quickCertificateError = get("quickCertificateError");
+    const quickEmailError = get("quickEmailError");
 
     if (quickMobileNumber) {
       quickMobileNumber.addEventListener("input", function () {
@@ -640,6 +658,8 @@ document.addEventListener("DOMContentLoaded", function () {
           error.textContent = "";
         }
       });
+
+      if (!validateEmail(quickEmail, quickEmailError)) isValid = false;
 
       if (!quickFullName || quickFullName.value.trim() === "") {
         if (quickFullNameError) {
@@ -696,7 +716,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!isValid) return;
 
-      const data = collectFormData(quickEnquiryForm, "Quick Enquiry");
+      const data = collectFormData(quickEnquiryForm, "QMS ISO Contact");
 
       if (!data) return;
 
@@ -718,6 +738,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactName = get("contactName");
     const contactBusiness = get("contactBusiness");
     const contactMobile = get("contactMobile");
+    const contactEmail = get("contactEmail");
     const contactCertificate = get("contactCertificate");
 
     const contactNameError = get("contactNameError");
@@ -727,6 +748,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactMobileError = get("contactMobileError");
 
     const contactCertificateError = get("contactCertificateError");
+    const contactEmailError = get("contactEmailError");
 
     if (contactMobile) {
       contactMobile.addEventListener("input", function () {
@@ -749,6 +771,8 @@ document.addEventListener("DOMContentLoaded", function () {
           error.textContent = "";
         }
       });
+
+      if (!validateEmail(contactEmail, contactEmailError)) valid = false;
 
       if (!contactName || contactName.value.trim() === "") {
         if (contactNameError) {
@@ -802,7 +826,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (!valid) return;
 
-      const data = collectFormData(contactForm, "Contact Form");
+      const data = collectFormData(contactForm, "QMS ISO Contact");
 
       if (!data) return;
 
@@ -912,5 +936,5 @@ document.addEventListener("DOMContentLoaded", function () {
      FINAL CONSOLE CHECK
      ========================================================= */
 
-  console.log("QMSISO script.js loaded successfully.");
+  console.log("QMS ISO Certification script.js loaded successfully.");
 });

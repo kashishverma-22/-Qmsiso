@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 header('Content-Type: application/json; charset=utf-8');
 
 /* =====================================================================
@@ -20,7 +20,7 @@ $SMTP_PASS  = 'egxosajnprnyvbyi';         // <-- yahan App Password daalo
 
 $TO_EMAIL   = 'orientalcertification@gmail.com';    // enquiry yahan aayegi
 $FROM_EMAIL = 'newquery.business@gmail.com';
-$SITE_NAME  = 'QMSISO';
+$SITE_NAME  = 'QMS ISO Certification';
 $BRAND_NAVY = '#0b1f3a';
 $BRAND_GOLD = '#f2a51a';
 
@@ -47,7 +47,7 @@ function line($key, $default = '') {
 
 function h($s) { return htmlspecialchars($s, ENT_QUOTES, 'UTF-8'); }
 
-$formName    = line('form_name', 'Website Enquiry');
+$formName    = 'QMS ISO Contact';
 $name        = line('name');
 $business    = line('business', 'Not Provided');
 $phone       = line('phone');

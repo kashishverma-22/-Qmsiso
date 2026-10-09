@@ -356,7 +356,7 @@ const serviceDetail = document.getElementById("serviceDetail");
    PAGE TITLE
 ========================================================= */
 
-document.title = `${selectedService.title} | QMSISO`;
+document.title = `${selectedService.title} | QMS ISO Certification`;
 
 /* =========================================================
    RENDER SERVICE
