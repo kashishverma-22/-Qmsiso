@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "ISO 22000:2018": "iso-22000", "ISO 13485:2016": "iso-13485",
     "ISO 50001:2018": "iso-50001", "ISO 20000-1:2018": "iso-20000-1",
     "GMP Certification": "gmp", "CE Marking": "ce-marking",
-    "HACCP Certification": "haccp", "Kosher Certification": "kosher",
+    "HACCP Certification": "haccp", "Halal Certification": "halal", "Kosher Certification": "kosher",
     "RoHS Compliance": "rohs"
   };
   document.querySelectorAll(".iso-quote-btn, .compliance-quote-btn").forEach((button) => {
@@ -864,8 +864,23 @@ document.addEventListener("DOMContentLoaded", function () {
     ".main-navbar .dropdown-item",
   );
 
+  document.querySelectorAll(".main-navbar .submenu-toggle").forEach(function (toggle) {
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.addEventListener("click", function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      const submenuItem = this.closest(".dropdown-submenu");
+      if (!submenuItem) return;
+
+      const isOpen = submenuItem.classList.toggle("submenu-open");
+      this.setAttribute("aria-expanded", String(isOpen));
+    });
+  });
+
   dropdownItems.forEach(function (item) {
     item.addEventListener("click", function () {
+      if (item.classList.contains("submenu-toggle")) return;
       navLinks.forEach(function (link) {
         link.classList.remove("active");
       });
@@ -920,6 +935,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   dropdownItems.forEach(function (item) {
     item.addEventListener("click", function () {
+      if (item.classList.contains("submenu-toggle")) return;
       const mainMenu = get("mainMenu");
 
       if (mainMenu && mainMenu.classList.contains("show")) {

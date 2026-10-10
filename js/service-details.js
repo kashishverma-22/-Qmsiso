@@ -251,6 +251,25 @@ const services = {
     ],
   },
 
+  halal: {
+    eyebrow: "Food & Product Compliance",
+    title: "Halal Certification",
+    intro:
+      "Halal certification helps demonstrate that applicable products, ingredients and processes meet relevant Halal requirements.",
+    description:
+      "A structured Halal certification process reviews ingredients, sourcing, production practices, handling and relevant documentation. It can help food, beverage, cosmetic and other eligible businesses build confidence with customers and access markets that require Halal assurance.",
+    icon: "fa-solid fa-certificate",
+    highlightTitle: "Build Confidence with Halal Assurance",
+    highlightText:
+      "Review products and processes against applicable Halal requirements with clear documentation and practical implementation support.",
+    focusAreas: [
+      "Ingredient and supplier review",
+      "Production and handling practices",
+      "Facility and process assessment",
+      "Documentation and ongoing compliance support",
+    ],
+  },
+
   "ce-marking": {
     eyebrow: "Product Compliance",
     title: "CE Marking",

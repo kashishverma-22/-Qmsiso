@@ -229,7 +229,7 @@ select {
   color: var(--navy) !important;
 }
 
-.dropdown-toggle::after {
+/* .dropdown-toggle::after {
   margin-left: 6px;
   vertical-align: 2px;
   font-size: 10px;
@@ -254,7 +254,150 @@ select {
 .dropdown-item:hover {
   color: var(--navy);
   background: #aac7f8;
+} */
+
+
+
+/* =========================================
+   QMSISO SERVICES DROPDOWN
+========================================= */
+
+.services-dropdown {
+  position: relative;
 }
+
+.services-dropdown > .dropdown-menu {
+  margin-top: 10px;
+  padding: 8px;
+  min-width: 205px;
+  border: 1px solid #e8edf3;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 43, 85, 0.12);
+  z-index: 1050;
+}
+
+/* Dropdown items */
+.services-dropdown .dropdown-item {
+  padding: 10px 13px;
+  border-radius: 6px;
+  color: #173653;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: normal;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.services-dropdown .dropdown-item:hover,
+.services-dropdown .dropdown-item:focus {
+  color: #003f78;
+  background: #fff3d9;
+}
+
+/* First-level submenu items */
+.services-dropdown .dropdown-submenu {
+  position: relative;
+}
+
+.services-dropdown .submenu-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.services-dropdown .submenu-arrow {
+  font-size: 11px;
+  color: #f4a313;
+  transition: transform 0.2s ease;
+}
+
+/* Nested submenu */
+.services-dropdown .dropdown-menu.submenu {
+  position: absolute;
+  top: -8px;
+  left: calc(100% + 7px);
+  margin: 0;
+  padding: 8px;
+  min-width: 245px;
+  max-width: min(300px, calc(100vw - 30px));
+  max-height: 70vh;
+  overflow-y: auto;
+  border: 1px solid #e8edf3;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 43, 85, 0.14);
+  z-index: 1060;
+}
+
+/* Desktop hover */
+@media (min-width: 992px) {
+  .services-dropdown .dropdown-submenu > .submenu {
+    display: none;
+  }
+
+  .services-dropdown .dropdown-submenu:hover > .submenu,
+  .services-dropdown .dropdown-submenu:focus-within > .submenu,
+  .services-dropdown .dropdown-submenu.submenu-open > .submenu {
+    display: block;
+  }
+
+  .services-dropdown .dropdown-submenu:hover > .submenu-toggle
+  .submenu-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+/* Mobile and tablet */
+@media (max-width: 991.98px) {
+  .services-dropdown > .dropdown-menu {
+    margin-top: 4px;
+    width: 100%;
+    min-width: 0;
+    max-height: 75vh;
+    overflow-y: auto;
+  }
+
+  .services-dropdown .dropdown-menu.submenu {
+    position: static;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    max-height: none;
+    margin: 5px 0 8px;
+    padding: 5px 5px 5px 10px;
+    border: 0;
+    border-left: 2px solid #f4a313;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+
+  /* Closed by default; opens when parent has submenu-open */
+  .services-dropdown .dropdown-submenu > .submenu {
+    display: none;
+  }
+
+  .services-dropdown .dropdown-submenu.submenu-open > .submenu {
+    display: block;
+  }
+
+  .services-dropdown .submenu-arrow {
+    transform: rotate(0deg);
+  }
+
+  .services-dropdown .dropdown-submenu.submenu-open > .submenu-toggle
+  .submenu-arrow {
+    transform: rotate(90deg);
+  }
+
+  .services-dropdown .submenu .dropdown-item {
+    padding: 9px 12px;
+    font-size: 13px;
+  }
+}
+
 
 .quote-btn {
   border: none;
