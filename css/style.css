@@ -2535,7 +2535,7 @@ select {
 ========================================================= */
 .footer-whatsapp {
   position: fixed;
-  left: 22px;
+  right: 22px;
   bottom: 20px;
   z-index: 9998;
   width: 54px;
@@ -2554,30 +2554,6 @@ select {
 
 .footer-whatsapp:hover {
   color: #ffffff;
-  transform: translateY(-4px) scale(1.04);
-}
-
-.footer-chat {
-  position: fixed;
-  right: 22px;
-  bottom: 20px;
-  z-index: 9998;
-  width: 54px;
-  height: 54px;
-  border: none;
-  border-radius: 50%;
-  background: #1268f3;
-  color: #ffffff;
-  font-size: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0 7px 20px rgba(18, 104, 243, 0.3);
-  transition: 0.3s ease;
-}
-
-.footer-chat:hover {
   transform: translateY(-4px) scale(1.04);
 }
 
