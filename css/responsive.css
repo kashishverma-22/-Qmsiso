@@ -249,6 +249,17 @@
   .main-navbar .dropdown.show>.dropdown-menu,
   .main-navbar .dropdown-menu.show {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
+  }
+
+  .services-dropdown .dropdown-submenu.submenu-open > .submenu {
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: none !important;
   }
 
   /* Dropdown items */

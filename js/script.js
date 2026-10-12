@@ -458,13 +458,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (heroQuoteForm) {
     const fullName = get("fullName");
-    const businessName = get("businessName");
     const mobileNumber = get("mobileNumber");
     const heroEmail = get("heroEmail");
     const certificate = get("certificate");
 
     const fullNameError = get("fullNameError");
-    const businessNameError = get("businessNameError");
     const mobileNumberError = get("mobileNumberError");
     const certificateError = get("certificateError");
     const heroEmailError = get("heroEmailError");
@@ -489,34 +487,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       setSuccess(fullName, fullNameError);
-
-      return true;
-    }
-
-    function validateHeroBusiness() {
-      if (!businessName) return true;
-
-      const value = businessName.value.trim();
-
-      if (value === "") {
-        setError(
-          businessName,
-          businessNameError,
-          "Please enter your business name.",
-        );
-        return false;
-      }
-
-      if (value.length < 2) {
-        setError(
-          businessName,
-          businessNameError,
-          "Please enter a valid business name.",
-        );
-        return false;
-      }
-
-      setSuccess(businessName, businessNameError);
 
       return true;
     }
@@ -578,10 +548,6 @@ document.addEventListener("DOMContentLoaded", function () {
       fullName.addEventListener("blur", validateHeroName);
     }
 
-    if (businessName) {
-      businessName.addEventListener("blur", validateHeroBusiness);
-    }
-
     if (mobileNumber) {
       mobileNumber.addEventListener("blur", validateHeroMobile);
     }
@@ -594,12 +560,11 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
 
       const validName = validateHeroName();
-      const validBusiness = validateHeroBusiness();
       const validMobile = validateHeroMobile();
       const validCertificate = validateHeroCertificate();
       const validEmail = validateEmail(heroEmail, heroEmailError);
 
-      if (!validName || !validBusiness || !validMobile || !validCertificate || !validEmail) {
+      if (!validName || !validMobile || !validCertificate || !validEmail) {
         return;
       }
 
@@ -623,14 +588,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (quickEnquiryForm) {
     const quickFullName = get("quickFullName");
-    const quickBusinessName = get("quickBusinessName");
     const quickMobileNumber = get("quickMobileNumber");
     const quickEmail = get("quickEmail");
     const quickCertificate = get("quickCertificate");
 
     const quickFullNameError = get("quickFullNameError");
-
-    const quickBusinessNameError = get("quickBusinessNameError");
 
     const quickMobileNumberError = get("quickMobileNumberError");
 
@@ -650,7 +612,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       [
         quickFullNameError,
-        quickBusinessNameError,
         quickMobileNumberError,
         quickCertificateError,
       ].forEach(function (error) {
@@ -671,15 +632,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (quickFullNameError) {
           quickFullNameError.textContent =
             "Name must contain at least 3 characters.";
-        }
-
-        isValid = false;
-      }
-
-      if (!quickBusinessName || quickBusinessName.value.trim() === "") {
-        if (quickBusinessNameError) {
-          quickBusinessNameError.textContent =
-            "Please enter your business name.";
         }
 
         isValid = false;
@@ -736,14 +688,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (contactForm) {
     const contactName = get("contactName");
-    const contactBusiness = get("contactBusiness");
     const contactMobile = get("contactMobile");
     const contactEmail = get("contactEmail");
     const contactCertificate = get("contactCertificate");
 
     const contactNameError = get("contactNameError");
-
-    const contactBusinessError = get("contactBusinessError");
 
     const contactMobileError = get("contactMobileError");
 
@@ -763,7 +712,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       [
         contactNameError,
-        contactBusinessError,
         contactMobileError,
         contactCertificateError,
       ].forEach(function (error) {
@@ -783,14 +731,6 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (contactName.value.trim().length < 3) {
         if (contactNameError) {
           contactNameError.textContent = "Name must be at least 3 characters.";
-        }
-
-        valid = false;
-      }
-
-      if (!contactBusiness || contactBusiness.value.trim() === "") {
-        if (contactBusinessError) {
-          contactBusinessError.textContent = "Please enter your business name.";
         }
 
         valid = false;
@@ -893,6 +833,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener("click", function (event) {
+      if (this.matches(".dropdown-toggle, .submenu-toggle")) return;
+
       const targetId = this.getAttribute("href");
 
       if (!targetId || targetId === "#") {

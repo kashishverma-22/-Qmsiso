@@ -143,12 +143,16 @@ select {
 }
 
 .main-navbar .dropdown-menu {
-  display: none;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
   position: absolute;
   top: 100%;
   left: 0;
   margin-top: 0 !important;
-  transform: translateY(10px);
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
   border: none;
   border-radius: 8px;
   padding: 8px;
@@ -157,7 +161,19 @@ select {
 }
 
 .main-navbar .dropdown:hover>.dropdown-menu {
-  display: block;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
+}
+
+.main-navbar .dropdown:focus-within>.dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition-delay: 0s;
 }
 
 /* =========================================
@@ -267,7 +283,8 @@ select {
 }
 
 .services-dropdown > .dropdown-menu {
-  margin-top: 10px;
+  margin-top: 0;
+  top: 100%;
   padding: 8px;
   min-width: 205px;
   border: 1px solid #e8edf3;
@@ -334,13 +351,22 @@ select {
 /* Desktop hover */
 @media (min-width: 992px) {
   .services-dropdown .dropdown-submenu > .submenu {
-    display: none;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(4px);
+    transition: opacity 180ms ease, transform 180ms ease, visibility 0s linear 180ms;
   }
 
   .services-dropdown .dropdown-submenu:hover > .submenu,
   .services-dropdown .dropdown-submenu:focus-within > .submenu,
   .services-dropdown .dropdown-submenu.submenu-open > .submenu {
-    display: block;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+    transition-delay: 0s;
   }
 
   .services-dropdown .dropdown-submenu:hover > .submenu-toggle
@@ -793,7 +819,7 @@ select {
 }
 
 .form-field {
-  margin-bottom: 6px;
+  margin-bottom: 16px;
 }
 
 .form-field input,
