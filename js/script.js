@@ -813,6 +813,19 @@ document.addEventListener("DOMContentLoaded", function () {
       const submenuItem = this.closest(".dropdown-submenu");
       if (!submenuItem) return;
 
+      const servicesMenu = submenuItem.closest(".services-dropdown");
+      if (servicesMenu) {
+        servicesMenu
+          .querySelectorAll(".dropdown-submenu.submenu-open")
+          .forEach(function (openItem) {
+            if (openItem === submenuItem) return;
+
+            openItem.classList.remove("submenu-open");
+            const openToggle = openItem.querySelector(":scope > .submenu-toggle");
+            if (openToggle) openToggle.setAttribute("aria-expanded", "false");
+          });
+      }
+
       const isOpen = submenuItem.classList.toggle("submenu-open");
       this.setAttribute("aria-expanded", String(isOpen));
     });
