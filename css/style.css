@@ -395,14 +395,17 @@ select {
     width: 100%;
     min-width: 0;
     max-width: 100%;
-    max-height: none;
+    max-height: 45vh;
     margin: 5px 0 8px;
     padding: 5px 5px 5px 10px;
     border: 0;
     border-left: 2px solid #f4a313;
     border-radius: 0;
     box-shadow: none;
-    overflow: visible;
+    overflow-x: hidden;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* Closed by default; opens when parent has submenu-open */
