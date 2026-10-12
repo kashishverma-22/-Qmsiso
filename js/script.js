@@ -810,6 +810,8 @@ document.addEventListener("DOMContentLoaded", function () {
       event.preventDefault();
       event.stopPropagation();
 
+      if (window.matchMedia("(min-width: 992px)").matches) return;
+
       const submenuItem = this.closest(".dropdown-submenu");
       if (!submenuItem) return;
 

@@ -334,7 +334,7 @@ select {
 .services-dropdown .dropdown-menu.submenu {
   position: absolute;
   top: -8px;
-  left: calc(100% + 7px);
+  left: 100%;
   margin: 0;
   padding: 8px;
   min-width: 245px;
@@ -348,18 +348,8 @@ select {
   z-index: 1060;
 }
 
-/* Desktop nested menu opens from its click-controlled state. */
+/* Desktop nested menus follow the same hover behavior as the main menu. */
 @media (min-width: 992px) {
-  /* Preserve a small visual gap between the parent and nested menu. */
-  .services-dropdown .dropdown-menu.submenu::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 100%;
-    width: 8px;
-    height: 100%;
-  }
-
   .services-dropdown .dropdown-submenu > .submenu {
     display: block;
     visibility: hidden;
@@ -367,21 +357,25 @@ select {
     pointer-events: none;
     transform: translateX(4px);
     transition:
-      opacity 600ms ease,
-      transform 600ms ease,
-      visibility 0s linear 600ms;
+      opacity 180ms ease,
+      transform 180ms ease,
+      visibility 0s linear 180ms;
   }
 
+  .services-dropdown .dropdown-submenu:hover > .submenu,
+  .services-dropdown .dropdown-submenu:focus-within > .submenu,
   .services-dropdown .dropdown-submenu.submenu-open > .submenu {
     visibility: visible;
     opacity: 1;
     pointer-events: auto;
     transform: translateX(0);
-    transition-delay: 180ms, 180ms, 0s;
+    transition-delay: 0s;
   }
 
+  .services-dropdown .dropdown-submenu:hover > .submenu-toggle
+    .submenu-arrow,
   .services-dropdown .dropdown-submenu.submenu-open > .submenu-toggle
-  .submenu-arrow {
+    .submenu-arrow {
     transform: rotate(90deg);
   }
 }
